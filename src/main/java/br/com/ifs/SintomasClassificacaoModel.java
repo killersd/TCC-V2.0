@@ -1,8 +1,33 @@
 package br.com.ifs;
 
-public class SintomasClassificacaoModel {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TB_SINTOMASCLASSIFICACAO")
+public class SintomasClassificacaoModel implements Serializable {
+
+	private static final long serialVersionUID = 1l;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	private int tempoAtendimentoMinutos;
 	private String sintomas, classificacao, local, grupo, tempoAtendimentoImediato;
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getTempoAtendimentoImediato() {
 		return tempoAtendimentoImediato;
 	}
@@ -10,8 +35,6 @@ public class SintomasClassificacaoModel {
 	public void setTempoAtendimentoImediato(String tempoAtendimentoImediato) {
 		this.tempoAtendimentoImediato = tempoAtendimentoImediato;
 	}
-
-	private int tempoAtendimentoMinutos;
 
 	public int getTempoAtendimentoMinutos() {
 		return tempoAtendimentoMinutos;
@@ -52,5 +75,5 @@ public class SintomasClassificacaoModel {
 	public void setGrupo(String grupo) {
 		this.grupo = grupo;
 	}
-	
+
 }

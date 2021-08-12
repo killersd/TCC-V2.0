@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SintomasClassificacaoController {
 	
-	@RequestMapping("/exibirForm")
-	public String exibirForm() {
-		return "index";
-	}
-	
 	@Autowired
 	private KieSession session;
 

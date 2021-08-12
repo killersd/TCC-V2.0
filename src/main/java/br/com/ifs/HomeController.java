@@ -9,5 +9,25 @@ public class HomeController {
 	@RequestMapping("/")
 	public String homeApp() {
 		return "index";
+	}
+	
+	@RequestMapping("/grupos")
+	public String grupos() {
+		return "grupos";
 	}	
+	
+	@RequestMapping("/criancas")
+	public String criancas() {
+		return "grupos/criancas";
+	}
+	
+	@RequestMapping("/traumas")
+	public String traumas() {
+		return "grupos/traumas";
+	}
+	
+	@RequestMapping("/bebeChorando")
+	public String bebeChorando() {
+		return "criancas/bebeChorando";
+	}
 }
