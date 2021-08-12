@@ -74,7 +74,12 @@ rule "Choque_traumas"
 	then
 		offerObject.setClassificacao("VERMELHA");
 	end	
-
+rule "Adulto_Convulsionando"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Convulsionando")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end	
 //------------------------------------------------------------------------------------------------------------------------
 
 //Regras para o grupo CRIANÇAS classificação LARANJA
