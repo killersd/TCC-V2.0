@@ -1,14 +1,15 @@
 package br.com.ifs;
 
+import java.util.List;
+
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(value="/api")
@@ -19,7 +20,7 @@ public class SintomasClassificacaoController {
 	@Autowired
 	private SintomasClassificacaoRepository sintomasClassificacaoRepository;
 
-	@PostMapping("/SintomasClassificacaoModel")
+	@PostMapping("/SintomasClassificacao")
 	public SintomasClassificacaoModel classificarPaciente(@RequestBody SintomasClassificacaoModel sintomasClassificacao) {
 		
 		session.insert(sintomasClassificacao);
@@ -69,11 +70,21 @@ public class SintomasClassificacaoController {
 			sintomasClassificacao.setTempoAtendimentoMinutos(120);
 			break;
 		}
-		return sintomasClassificacao;
+		return sintomasClassificacaoRepository.save(sintomasClassificacao);
 	}
 	
 	@GetMapping("/sintomasclassificacao")
 	public List<SintomasClassificacaoModel> listaClassificacoes(){
 		return sintomasClassificacaoRepository.findAll();
 	}
+	
+	@GetMapping("/sintomasclassificacao/{id}")
+	public SintomasClassificacaoModel listaClassificacao(@PathVariable(value="id") long id){
+		return sintomasClassificacaoRepository.findById(id);
+	}
+	
+	
+	
+	
+	
 }
