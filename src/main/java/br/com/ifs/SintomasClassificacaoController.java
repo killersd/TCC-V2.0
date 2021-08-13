@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,8 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(value="/api")
+@Api(value="API REST para a triagem de pacientes")
+@CrossOrigin(origins="*")
 public class SintomasClassificacaoController {
 	
 	@Autowired
@@ -21,6 +28,7 @@ public class SintomasClassificacaoController {
 	private SintomasClassificacaoRepository sintomasClassificacaoRepository;
 
 	@PostMapping("/SintomasClassificacao")
+	@ApiOperation(value="Insere a classificação de risco no banco de dados logo após o drools ter inferido-a")
 	public SintomasClassificacaoModel classificarPaciente(@RequestBody SintomasClassificacaoModel sintomasClassificacao) {
 		
 		session.insert(sintomasClassificacao);
@@ -74,15 +82,22 @@ public class SintomasClassificacaoController {
 	}
 	
 	@GetMapping("/sintomasclassificacao")
+	@ApiOperation(value="Retorna todas as classificações existentes no banco de dados")
 	public List<SintomasClassificacaoModel> listaClassificacoes(){
 		return sintomasClassificacaoRepository.findAll();
 	}
 	
 	@GetMapping("/sintomasclassificacao/{id}")
+	@ApiOperation(value="Retorna uma classificação do banco quando passado um ID")
 	public SintomasClassificacaoModel listaClassificacao(@PathVariable(value="id") long id){
 		return sintomasClassificacaoRepository.findById(id);
 	}
 	
+	@DeleteMapping("/SintomasClassificacao")
+	@ApiOperation(value="Este método deleta uma classificação existente no banco")
+	public void deletaRegistro(@RequestBody SintomasClassificacaoModel sintomasClassificacaoModel){
+		sintomasClassificacaoRepository.delete(sintomasClassificacaoModel);
+	}
 	
 	
 	
