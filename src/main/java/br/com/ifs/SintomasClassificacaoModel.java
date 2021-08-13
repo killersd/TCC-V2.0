@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "TB_SINTOMASCLASSIFICACAO")
 public class SintomasClassificacaoModel implements Serializable {
 
-	private static final long serialVersionUID = 1l;
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
