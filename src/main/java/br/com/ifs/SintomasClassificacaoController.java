@@ -81,13 +81,13 @@ public class SintomasClassificacaoController {
 		return sintomasClassificacaoRepository.save(sintomasClassificacao);
 	}
 	
-	@GetMapping("/sintomasclassificacao")
+	@GetMapping("/SintomasClassificacao")
 	@ApiOperation(value="Retorna todas as classificações existentes no banco de dados")
 	public List<SintomasClassificacaoModel> listaClassificacoes(){
 		return sintomasClassificacaoRepository.findAll();
 	}
 	
-	@GetMapping("/sintomasclassificacao/{id}")
+	@GetMapping("/SintomasClassificacao/{id}")
 	@ApiOperation(value="Retorna uma classificação do banco quando passado um ID")
 	public SintomasClassificacaoModel listaClassificacao(@PathVariable(value="id") long id){
 		return sintomasClassificacaoRepository.findById(id);
@@ -98,8 +98,4 @@ public class SintomasClassificacaoController {
 	public void deletaRegistro(@RequestBody SintomasClassificacaoModel sintomasClassificacaoModel){
 		sintomasClassificacaoRepository.delete(sintomasClassificacaoModel);
 	}
-	
-	
-	
-	
 }

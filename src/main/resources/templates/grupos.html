@@ -1,40 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Grupos de Fluxogramas</title>
 </head>
 <body>
+	<h1>Grupos de Fluxogramas</h1>
+
 	<form>
-		<h2>Escolha o grupo que deseja ver:</h2>
-		<div>
-			<button style="width: 300px">Crianças</button>
-		</div>
-		<br />
-		<div>
-			<button style="width: 300px">Traumas</button>
-		</div>
-		<br />
-		<div>
-			<button style="width: 300px">Partes do Corpo</button>
-		</div>
-		<br />
-		<div>
-			<button style="width: 300px">Dores</button>
-		</div>
-		<br />
-		<div>
-			<button style="width: 300px">Sintomas Comuns</button>
-		</div>
-		<br />
-		<div>
-			<button style="width: 300px">Outros</button>
-		</div>
-		<br />
-		<div>
-			<button style="width: 300px">Voltar</button>
-		</div>
-		<br />
+		<p>Escolha o grupo desejado:</p>
+		
+		<input type="radio"
+		
+		id="criancas" 
+		name="fav_language" 
+		value="criancas">
+		<label for="html">Criancas</label><br>
+		 
+		<input type="radio" 
+		
+		id="traumas"
+			name="fav_language" 
+			value="traumas">
+			<label for="traumas">Traumas</label><br>
+			
+		<input type="radio" 
+		
+		id="partes do corpo" 
+		name="fav_language"
+			value="partes do corpo">
+			<label for="partes do corpo">Partes	do corpo</label><br>
+			
+		<input type="radio" 
+		 
+		id="dores" 
+		name="fav_language" 
+		value="dores">
+		<label for="dores">Dores</label><br>
+		
+		<input type="radio" 
+		
+		id="sintomas comuns" 
+		name="fav_language" 
+		value="sintomas comuns">
+		<label for="sintomas comuns">Sintomas comuns</label><br>
+		
+		<input type="radio" 
+		
+		id="outros" 
+		name="fav_language" 
+		value="outros">
+		<label for="outros">Outros</label><br>
+		
+		<br> <input type="submit" value="Confirmar" style="width: 300px">
 	</form>
 </body>
 </html>
