@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import testes.User;
-
 @Controller
 public class HomeController {
 
@@ -19,11 +17,6 @@ public class HomeController {
 	public String homeApp() {
 		return "index";
 	}
-
-//	@RequestMapping("/grupos")
-//	public String grupos() {
-//		return "grupos";
-//	}
 
 	@RequestMapping("/criancas")
 	public String criancas() {
@@ -48,7 +41,7 @@ public class HomeController {
 	@GetMapping("/grupos")
 	public String showForm(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
-		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);		
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);	
 		return "grupos";
 	}
 
