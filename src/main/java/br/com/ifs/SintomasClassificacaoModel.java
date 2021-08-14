@@ -76,4 +76,10 @@ public class SintomasClassificacaoModel implements Serializable {
 		this.grupo = grupo;
 	}
 
+	@Override
+	public String toString() {
+		return "SintomasClassificacaoModel [grupo=" + grupo + "]";
+	}
+
+	
 }

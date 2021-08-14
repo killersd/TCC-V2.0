@@ -1,59 +1,48 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Grupos de Fluxogramas</title>
+<title>User Registrarion</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+
+</style>
 </head>
 <body>
-	<h1>Grupos de Fluxogramas</h1>
+	<div align="center">
+		<h1>Escolha o grupo</h1>
+		<form action="#" th:action="@{/grupos}" th:object="${sintomasClassificacaoModel}"
+			method="post">
 
-	<form>
-		<p>Escolha o grupo desejado:</p>
-		
-		<input type="radio"
-		
-		id="criancas" 
-		name="fav_language" 
-		value="criancas">
-		<label for="html">Criancas</label><br>
-		 
-		<input type="radio" 
-		
-		id="traumas"
-			name="fav_language" 
-			value="traumas">
-			<label for="traumas">Traumas</label><br>
-			
-		<input type="radio" 
-		
-		id="partes do corpo" 
-		name="fav_language"
-			value="partes do corpo">
-			<label for="partes do corpo">Partes	do corpo</label><br>
-			
-		<input type="radio" 
-		 
-		id="dores" 
-		name="fav_language" 
-		value="dores">
-		<label for="dores">Dores</label><br>
-		
-		<input type="radio" 
-		
-		id="sintomas comuns" 
-		name="fav_language" 
-		value="sintomas comuns">
-		<label for="sintomas comuns">Sintomas comuns</label><br>
-		
-		<input type="radio" 
-		
-		id="outros" 
-		name="fav_language" 
-		value="outros">
-		<label for="outros">Outros</label><br>
-		
-		<br> <input type="submit" value="Confirmar" style="width: 300px">
-	</form>
+
+			<input type="radio" th:field="*{grupo}" value="criancas" />Criancas<br />
+			<input type="radio" th:field="*{grupo}" value="traumas" />Traumas<br />
+			<input type="radio" th:field="*{grupo}" value="partes do corpo" />Partes do corpo<br />
+			<input type="radio" th:field="*{grupo}" value="dores" />Dores<br />
+			<input type="radio" th:field="*{grupo}" value="sintomas comuns" />Sintomas comuns<br />
+			<input type="radio" th:field="*{grupo}" value="outros" />Outros<br />
+
+			<button type="submit">Confirmar</button>
+		</form>
+	</div>
 </body>
 </html>

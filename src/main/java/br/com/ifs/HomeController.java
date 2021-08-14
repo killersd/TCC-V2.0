@@ -20,10 +20,10 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping("/grupos")
-	public String grupos() {
-		return "grupos";
-	}
+//	@RequestMapping("/grupos")
+//	public String grupos() {
+//		return "grupos";
+//	}
 
 	@RequestMapping("/criancas")
 	public String criancas() {
@@ -45,21 +45,17 @@ public class HomeController {
 		return "teste";
 	}
 
-	@GetMapping("/register")
+	@GetMapping("/grupos")
 	public String showForm(Model model) {
-		User user = new User();
-		model.addAttribute("user", user);
-		
-		List<String> professionList = Arrays.asList("Developer", "Designer", "Architect");
-		model.addAttribute("professionList",professionList);
-		
-		return "register_form";
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);		
+		return "grupos";
 	}
 
-	@PostMapping("/register")
-	public String submitForm(@ModelAttribute("user") User user) {
-		System.out.println(user);
-		return "register_success";
+	@PostMapping("/grupos")
+	public String submitForm(@ModelAttribute("sintomasclassificacao") SintomasClassificacaoModel sintomasClassificacaoModel) {
+		System.out.println(sintomasClassificacaoModel);
+		return "grupo_registrado";
 	}
 	
 	
