@@ -97,5 +97,45 @@ rule "Criança quente"
 	then
 		offerObject.setClassificacao("LARANJA");
 	end	
-
+	
+//---------------------------------------REGRAS DE TESTE-------------------------------------------------------------	
+rule "CRIANCA TESTE"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="teste")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end	
+rule "TRAUMAS TESTE"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="teste")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end	
+	
+rule "DORES TESTE"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="teste")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "PARTES DO CORPO TESTE"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes do corpo" && Sintomas=="teste")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "SINTOMAS COMUNS TESTE"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="sintomas comuns" && Sintomas=="teste")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+rule "OUTROS TESTE"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="outros" && Sintomas=="teste")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
 	
