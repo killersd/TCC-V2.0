@@ -25,6 +25,9 @@ public class HomeController {
 	public String bebeChorando() {
 		return "criancas/bebeChorando";
 	}
-
+	@RequestMapping("/classificacao_final")
+	public String classificacaoFinal() {
+		return "classificacao_final";
+	}
 
 }
