@@ -32,11 +32,16 @@ public class SintomasClassificacaoController {
 			@RequestBody SintomasClassificacaoModel sintomasClassificacao) {
 		GrupoController gc = new GrupoController();
 
-		// Preciso trazer essas duas variáveis da view
-		//sintomasClassificacao.setSintomas("Choque");
+		BebeChorandoController bcc = new BebeChorandoController();
+
 		sintomasClassificacao.setGrupo(gc.grupoString());
 		System.out.println("Grupo que veio de GrupoController: " + gc.grupoString());
 		System.out.println("Grupo que chegou no controller: " + sintomasClassificacao.getGrupo());
+		
+		sintomasClassificacao.setSintomas(bcc.sintomaString());
+		System.out.println("Sintoma que veio de BebeChorandoController: " + bcc.sintomaString());
+		System.out.println("Sintoma que chegou no controller: " + sintomasClassificacao.getSintomas());
+
 		session.insert(sintomasClassificacao);
 		session.fireAllRules();
 
@@ -45,7 +50,6 @@ public class SintomasClassificacaoController {
 		} else {
 			sintomasClassificacao.setLocal("POSTO DE SAUDE");
 		}
-
 		switch (sintomasClassificacao.getClassificacao()) {
 		case "VERMELHA":
 			sintomasClassificacao.setTempoAtendimentoImediato("ATENDIMENTO IMEDIATO");

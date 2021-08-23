@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Classificação de Risco</title>
 </head>
 <body>
-<div align="center">
-<h2>
-Sintoma mais grave:<br/>
-Classificação:<br/>
-Tempo de Atendimento:<br/>
-</h2>
-</div>
+	<form action="#" th:action="@{/sintomasclassificacao}"
+		th:object="${sintomasClassificacaoModel}" method="get">
+		<h1>
+			<span>Sintoma mais grave: </span><br /> <span>Classificação de
+				risco: </span><br /> <span>Tempo de atendimento: </span><br />
+		</h1>
+
+	</form>
 </body>
 </html>

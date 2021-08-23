@@ -25,7 +25,7 @@ rule "Convulsionando"
 	
 rule "Criança não reativa"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Criança não reativa")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Crianca_nao_reativa")
 	then
 		offerObject.setClassificacao("VERMELHA");
 	end	
@@ -46,58 +46,54 @@ rule "Hipoglicemia"
 		
 rule "Não reativa"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Não reativa")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Nao_reativa")
 	then
 		offerObject.setClassificacao("VERMELHA");
 	end	
 	
 rule "Obstrução das vias aéreas"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Obstrução das vias aéreas")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Obstrucao_das_vias_aereas")
 	then
 		offerObject.setClassificacao("VERMELHA");
 	end	
 		
 rule "Respiração Inadequada"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Respiração Inadequada")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Respiracao_inadequada")
 	then
 		offerObject.setClassificacao("VERMELHA");
 	end	
 //------------------------------------------------------------------------------------------------------------------------	
 
-//Regras para o grupo TRAUMAS classificação VERMELHA
-
-rule "Choque_traumas"
-	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Choque")
-	then
-		offerObject.setClassificacao("VERMELHA");
-	end	
-rule "Adulto_Convulsionando"
-	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Convulsionando")
-	then
-		offerObject.setClassificacao("VERMELHA");
-	end	
-//------------------------------------------------------------------------------------------------------------------------
-
 //Regras para o grupo CRIANÇAS classificação LARANJA
 
 rule "Comprometimento vascular distal"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Comprometimento vascular distal")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Comprometimento_vascular_distal")
 	then
 		offerObject.setClassificacao("LARANJA");		
 	end	
 
 rule "Criança quente"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Criança quente")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Crianca_quente")
 	then
 		offerObject.setClassificacao("LARANJA");
 	end	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 //---------------------------------------REGRAS DE TESTE-------------------------------------------------------------	
 rule "CRIANCA TESTE"
 	when 
@@ -139,3 +135,11 @@ rule "OUTROS TESTE"
 		offerObject.setClassificacao("VERDE");
 	end		
 	
+	
+	
+	rule "criancacomfebre"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Febril")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
