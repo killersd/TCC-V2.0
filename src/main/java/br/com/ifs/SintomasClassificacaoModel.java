@@ -78,7 +78,7 @@ public class SintomasClassificacaoModel implements Serializable {
 
 	@Override
 	public String toString() {
-		return grupo;
+		return classificacao;
 	}
 	
 }

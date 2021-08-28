@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Bebê Chorando</title>
+<title>Criança Irritadiça</title>
 <style type="text/css">
 label {
 	display: inline-block;
@@ -28,8 +28,8 @@ input[type=checkbox] {
 </head>
 <body>
 	<div align="center" class="container">
-		<h2>06 - Bebê Chorando</h2>
-		<form action="#" th:action="@{/bebeChorando}"
+		<h2>10 - Criança Irritadiça</h2>
+		<form action="#" th:action="@{/crianca_irritadica}"
 			th:object="${sintomasClassificacaoModel}" method="post">
 
 			<div>
@@ -45,6 +45,10 @@ input[type=checkbox] {
 				<label for="2">Choque</label>
 			</div>
 			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="477"
+					value="Hipoglicemia"> <label for="477">Hipoglicemia</label>
+			</div>
+			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="7"
 					value="Nao_reativa"> <label for="7">Nao_reativa</label>
 			</div>
@@ -57,20 +61,20 @@ input[type=checkbox] {
 					value="Resposta_a_voz_ou_a_dor_apenas"> <label for="11">Resposta_a_voz_ou_a_dor_apenas</label>
 			</div>
 			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="12"
-					value="Prostracao"> <label for="12">Prostracao</label>
+				<input type="checkbox" th:field="*{sintomas}" id="121"
+					value="Historia_de_overdose_ou_envenenamento"> <label for="121">Historia_de_overdose_ou_envenenamento</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="12"
-					value="Hipotonia"> <label for="12">Hipotonia</label>
+					value="Sinais_de_meningismo"> <label for="12">Sinais_de_meningismo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Erupcao_cultanea_fixa"> <label for="12">Erupcao_cultanea_fixa</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="13"
 					value="Purpura"> <label for="13">Purpura</label>
-			</div>
-			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="14"
-					value="Erupcao_cultanea_fixa"> <label for="14">Erupcao_cultanea_fixa</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="15"
@@ -82,23 +86,19 @@ input[type=checkbox] {
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="17"
-					value="Historia_de_inconsciencia"> <label for="17">Historia_de_inconsciencia</label>
+					value="Nao_entretivel"> <label for="17">Nao_entretivel</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="18"
-					value="Historia_discordante"> <label for="18">Historia_discordante</label>
+					value="Nao_se_alimenta"> <label for="18">Nao_se_alimenta</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="19"
-					value="Inconsolavel_pelos_pais"> <label for="19">Inconsolavel_pelos_pais</label>
+					value="Historia_discordante"> <label for="19">Historia_discordante</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="20"
 					value="Choro_prolongado_e_initerrupto"> <label for="20">Choro_prolongado_e_initerrupto</label>
-			</div>
-			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="21"
-					value="Incapaz_de_se_alimentar"> <label for="21">Incapaz_de_se_alimentar</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="22"

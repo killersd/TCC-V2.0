@@ -1,8 +1,8 @@
 package br.com.ifs;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface SintomasClassificacaoRepository extends JpaRepository<SintomasClassificacaoModel, Long> {
+public interface SintomasClassificacaoRepository extends CrudRepository<SintomasClassificacaoModel, Long> {
 
 	SintomasClassificacaoModel findById(long id);
 	

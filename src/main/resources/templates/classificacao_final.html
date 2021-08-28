@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
 <meta charset="UTF-8">
 <title>Classificação de Risco</title>
 </head>
 <body>
-	<form action="#" th:action="@{/sintomasclassificacao}"
-		th:object="${sintomasClassificacaoModel}" method="get">
-		<h1>
-			<span>Sintoma mais grave: </span><br /> <span>Classificação de
-				risco: </span><br /> <span>Tempo de atendimento: </span><br />
-		</h1>
+	<div
+		th:each="SintomasClassificacaoModel : ${sintomasClassificacaoModel}">
+		<div class="row">
+			-------------------------------------------------------------------------------------------------------------------
+			<p>
+				<span>Sintoma mais grave: </span><span
+					th:text="${SintomasClassificacaoModel.sintomas}"></span>
+			</p>
+			<p>
+				<span>Classificação: </span><span
+					th:text="${SintomasClassificacaoModel.classificacao}"></span>
+			</p>
+			<p>
+				<span>Local de Atendimento: </span><span
+					th:text="${SintomasClassificacaoModel.local}"></span>
+			</p>
+			<p>
+				<span>Tempo de Espera: </span><span
+					th:text="${SintomasClassificacaoModel.tempoAtendimentoMinutos}"></span>
+			</p>
+		</div>
+	</div>
 
-	</form>
+
 </body>
 </html>

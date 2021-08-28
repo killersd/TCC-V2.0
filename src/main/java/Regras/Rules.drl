@@ -81,65 +81,352 @@ rule "Criança quente"
 	then
 		offerObject.setClassificacao("LARANJA");
 	end	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+rule "Erupcao_cultanea_fixa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Erupcao_cultanea_fixa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
 
-//---------------------------------------REGRAS DE TESTE-------------------------------------------------------------	
-rule "CRIANCA TESTE"
+rule "Esforco_respiratorio_aumentado"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="teste")
-	then
-		offerObject.setClassificacao("VERMELHA");
-	end	
-rule "TRAUMAS TESTE"
-	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="teste")
-	then
-		offerObject.setClassificacao("VERMELHA");
-	end	
-	
-rule "DORES TESTE"
-	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="teste")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Esforco_respiratorio_aumentado")
 	then
 		offerObject.setClassificacao("LARANJA");
-	end	
-	
-rule "PARTES DO CORPO TESTE"
+	end
+rule "Evacuacao_de_sangue_vivo_ou_escurecido"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="partes do corpo" && Sintomas=="teste")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Evacuacao_de_sangue_vivo_ou_escurecido")
 	then
 		offerObject.setClassificacao("LARANJA");
-	end	
-	
-rule "SINTOMAS COMUNS TESTE"
+	end
+rule "Exaustao"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="sintomas comuns" && Sintomas=="teste")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Exaustao")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+rule "Frases_entrecortadas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Frases_entrecortadas")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Hemoptise"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Hemoptise")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Hipotermia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Hipotermia")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Historia_de_overdose_ou_envenenamento"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Historia_de_overdose_ou_envenenamento")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Historia_respiratoria_significativa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Historia_respiratoria_significativa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Inicio_agudo_apos_trauma"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Inicio_agudo_apos_trauma")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Nao_reage_aos_pais"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Nao_reage_aos_pais")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "PFE_muito_baixo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="PFE_muito_baixo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Prostracao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Prostracao")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Purpura"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Purpura")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Resposta_a_voz_ou_a_dor_apenas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Resposta_a_voz_ou_a_dor_apenas")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "Sat_O2_muito_baixa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sat_O2_muito_baixa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Sinais_de_dor_intensa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sinais_de_dor_intensa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Sinais_de_meningismo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sinais_de_meningismo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Vomito_de_sangue"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Vomito_de_sangue")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "Hipotonia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Hipotonia")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+//---------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo CRIANÇAS classificação AMARELA
+rule "Choro_prolongado_e_initerrupto"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Choro_prolongado_e_initerrupto")
 	then
 		offerObject.setClassificacao("AMARELA");
 	end
-rule "OUTROS TESTE"
+	
+rule "Disturbio_de_coagulacao"
 	when 
-		offerObject: SintomasClassificacaoModel(Grupo=="outros" && Sintomas=="teste")
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Disturbio_de_coagulacao")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "Dor_ao_movimento_articular"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Dor_ao_movimento_articular")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Dor_pleuritica"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Dor_pleuritica")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Fezes_pretas_ou_em_groselha"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Fezes_pretas_ou_em_groselha")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Historia_aguda_de_vomito_de_sangue"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Historia_aguda_de_vomito_de_sangue")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Historia_de_hemoptise"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Historia_de_hemoptise")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Historia_de_inconsciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Historia_de_inconsciencia")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Historia_discordante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Historia_discordante")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Incapaz_de_se_alimentar"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Incapaz_de_se_alimentar")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Inconsolavel_pelos_pais"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Inconsolavel_pelos_pais")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Massa_abdominal_visivel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Massa_abdominal_visivel")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Nao_entretivel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Nao_entretivel")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Nao_se_alimenta"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Nao_se_alimenta")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "PFE_baixo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="PFE_baixo")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Sat_O2_baixa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sat_O2_baixa")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "Sem_urinar"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sem_urinar")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Sinais_de_desidracao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sinais_de_desidracao")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Sinais_de_dor_moderada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sinais_de_dor_moderada")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "Vomitos_persistentes"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Vomitos_persistentes")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+//---------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo CRIANÇAS classificação VERDE	
+rule "Chieira"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Chieira")
 	then
 		offerObject.setClassificacao("VERDE");
-	end		
+	end
+
+rule "Comportamento_atipico"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Comportamento_atipico")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+
+	rule "Deformidade"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Deformidade")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+
+rule "Evento_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Evento_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
 	
-	
-	
-	rule "criancacomfebre"
+rule "Febril"
 	when 
 		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Febril")
 	then
 		offerObject.setClassificacao("VERDE");
-	end	
+	end
+
+rule "Inchaco"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Inchaco")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+	
+rule "Sinais_de_dor_leve"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sinais_de_dor_leve")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+
+rule "Sinais_de_dor_leve_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Sinais_de_dor_leve_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+	
+rule "Tosse_produtiva"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Tosse_produtiva")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+
+rule "Vomitos"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Vomitos")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+//--------------------------------------------------------------------------------------------------------------------

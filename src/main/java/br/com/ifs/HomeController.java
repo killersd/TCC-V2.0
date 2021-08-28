@@ -19,15 +19,10 @@ public class HomeController {
 	@RequestMapping("/traumas")
 	public String traumas() {
 		return "grupos/traumas";
+	}	
+	
+	@RequestMapping("/sintomas_classificacao")
+	public String sintomasClassificacao() {
+		return "sintomas_classificacao";
 	}
-
-	@RequestMapping("/bebeChorando")
-	public String bebeChorando() {
-		return "criancas/bebeChorando";
-	}
-	@RequestMapping("/classificacao_final")
-	public String classificacaoFinal() {
-		return "classificacao_final";
-	}
-
 }
