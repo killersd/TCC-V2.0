@@ -29,7 +29,7 @@ input[type=checkbox] {
 <body>
 	<div align="center" class="container">
 		<h2>06 - Bebê Chorando</h2>
-		<form action="#" th:action="@{/bebeChorando}"
+		<form action="#" th:action="@{/Criancas/bebeChorando}"
 			th:object="${sintomasClassificacaoModel}" method="post">
 
 			<div>
@@ -115,6 +115,9 @@ input[type=checkbox] {
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="25"
 					value="Evento_recente"> <label for="25">Evento_recente</label>
+			</div>
+			<div>
+				<a href="/criancas" style="width: 300px">Voltar para a tela de fluxograma para crianças</a>
 			</div>
 
 

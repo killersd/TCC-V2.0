@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Criança Irritadiça</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>10 - Criança Irritadiça</h2>
+		<form action="#" th:action="@{/Criancas/crianca_irritadica}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2" value="Choque">
+				<label for="2">Choque</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="477"
+					value="Hipoglicemia"> <label for="477">Hipoglicemia</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="7"
+					value="Nao_reativa"> <label for="7">Nao_reativa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Sinais_de_dor_intensa"> <label for="10">Sinais_de_dor_intensa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Resposta_a_voz_ou_a_dor_apenas"> <label for="11">Resposta_a_voz_ou_a_dor_apenas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="121"
+					value="Historia_de_overdose_ou_envenenamento"> <label
+					for="121">Historia_de_overdose_ou_envenenamento</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Sinais_de_meningismo"> <label for="12">Sinais_de_meningismo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Erupcao_cultanea_fixa"> <label for="12">Erupcao_cultanea_fixa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value="Purpura"> <label for="13">Purpura</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="15"
+					value="Crianca_quente"> <label for="15">Crianca_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="16"
+					value="Sinais_de_dor_moderada"> <label for="16">Sinais_de_dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="17"
+					value="Nao_entretivel"> <label for="17">Nao_entretivel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18"
+					value="Nao_se_alimenta"> <label for="18">Nao_se_alimenta</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="19"
+					value="Historia_discordante"> <label for="19">Historia_discordante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="20"
+					value="Choro_prolongado_e_initerrupto"> <label for="20">Choro_prolongado_e_initerrupto</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="22"
+					value="Sinais_de_dor_leve_recente"> <label for="22">Sinais_de_dor_leve_recente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="23" value="Febril">
+				<label for="23">Febril</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="24"
+					value="Comportamento_atipico"> <label for="24">Comportamento_atipico</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="25"
+					value="Evento_recente"> <label for="25">Evento_recente</label>
+			</div>
+			<div>
+				<a href="/criancas" style="width: 300px">Voltar para a tela de
+					fluxograma para crianças</a>
+			</div>
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

@@ -358,6 +358,12 @@ rule "Vomitos_persistentes"
 	then
 		offerObject.setClassificacao("AMARELA");
 	end
+rule "Articulacao_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="criancas" && Sintomas=="Articulacao_quente")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
 //---------------------------------------------------------------------------------------------------------------------
 //Regras para o grupo CRIANÇAS classificação VERDE	
 rule "Chieira"
@@ -430,3 +436,55 @@ rule "Vomitos"
 		offerObject.setClassificacao("VERDE");
 	end
 //--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo TRAUMAS classificação VERMELHA
+
+rule "traumas_Convulsionando"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Convulsionando")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "traumas_Choque"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Choque")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "traumas_Crianca_nao_reativa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Crianca_nao_reativa")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+
+rule "traumas_Hemorragia_hexanguinante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Hemorragia_hexanguinante")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "traumas_Hipoglicemia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Hipoglicemia")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "traumas_Obstrucao_das_vias_aereas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Obstrucao_das_vias_aereas")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "traumas_Respiracao_inadequada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Respiracao_inadequada")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo TRAUMAS classificação LARANJA

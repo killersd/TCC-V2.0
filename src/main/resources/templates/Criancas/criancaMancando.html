@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Criança Irritadiça</title>
+<title>Criança Mancando</title>
 <style type="text/css">
 label {
 	display: inline-block;
@@ -28,8 +28,8 @@ input[type=checkbox] {
 </head>
 <body>
 	<div align="center" class="container">
-		<h2>10 - Criança Irritadiça</h2>
-		<form action="#" th:action="@{/crianca_irritadica}"
+		<h2>11 - Criança Mancando</h2>
+		<form action="#" th:action="@{/Criancas/criancaMancando}"
 			th:object="${sintomasClassificacaoModel}" method="post">
 
 			<div>
@@ -45,28 +45,12 @@ input[type=checkbox] {
 				<label for="2">Choque</label>
 			</div>
 			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="477"
-					value="Hipoglicemia"> <label for="477">Hipoglicemia</label>
-			</div>
-			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="7"
-					value="Nao_reativa"> <label for="7">Nao_reativa</label>
-			</div>
-			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="10"
 					value="Sinais_de_dor_intensa"> <label for="10">Sinais_de_dor_intensa</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="11"
-					value="Resposta_a_voz_ou_a_dor_apenas"> <label for="11">Resposta_a_voz_ou_a_dor_apenas</label>
-			</div>
-			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="121"
-					value="Historia_de_overdose_ou_envenenamento"> <label for="121">Historia_de_overdose_ou_envenenamento</label>
-			</div>
-			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="12"
-					value="Sinais_de_meningismo"> <label for="12">Sinais_de_meningismo</label>
+					value="Comprometimento_vascular_distal"> <label for="11">Comprometimento_vascular_distal</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="12"
@@ -86,37 +70,44 @@ input[type=checkbox] {
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="17"
-					value="Nao_entretivel"> <label for="17">Nao_entretivel</label>
+					value="Dor_ao_movimento_articular"> <label for="17">Dor_ao_movimento_articular</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="18"
-					value="Nao_se_alimenta"> <label for="18">Nao_se_alimenta</label>
+					value="Historia_discordante"> <label for="18">Historia_discordante</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="19"
-					value="Historia_discordante"> <label for="19">Historia_discordante</label>
+					value="Disturbio_de_coagulacao"> <label for="19">Disturbio_de_coagulacao</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="20"
-					value="Choro_prolongado_e_initerrupto"> <label for="20">Choro_prolongado_e_initerrupto</label>
+					value="Articulacao_quente"> <label for="20">Articulacao_quente</label>
 			</div>
 			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="22"
-					value="Sinais_de_dor_leve_recente"> <label for="22">Sinais_de_dor_leve_recente</label>
+				<input type="checkbox" th:field="*{sintomas}" id="21"
+					value="Sinais_de_dor_leve"> <label for="21">Sinais_de_dor_leve</label>
 			</div>
 			<div>
-				<input type="checkbox" th:field="*{sintomas}" id="23" value="Febril">
-				<label for="23">Febril</label>
+				<input type="checkbox" th:field="*{sintomas}" id="22" value="Febril">
+				<label for="22">Febril</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="23"
+					value="Deformidade"> <label for="23">Deformidade</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="24"
-					value="Comportamento_atipico"> <label for="24">Comportamento_atipico</label>
+					value="Inchaco"> <label for="24">Inchaco</label>
 			</div>
 			<div>
 				<input type="checkbox" th:field="*{sintomas}" id="25"
 					value="Evento_recente"> <label for="25">Evento_recente</label>
 			</div>
-
+			<div>
+				<a href="/criancas" style="width: 300px">Voltar para a tela de
+					fluxograma para crianças</a>
+			</div>
 
 			<button type="submit">Ir para classificação</button>
 
