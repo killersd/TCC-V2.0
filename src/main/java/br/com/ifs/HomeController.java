@@ -31,6 +31,16 @@ public class HomeController {
 		return "grupos/dores";
 	}
 	
+	@RequestMapping("/classificacao_final")
+	public String cf() {
+		return "classificacao_final";
+	}
+	
+	@RequestMapping("/grupo_registrado")
+	public String cff() {
+		return "grupo_registrado";
+	}
+	
 	@RequestMapping("/sintomas_classificacao")
 	public String sintomasClassificacao() {
 		return "sintomas_classificacao";

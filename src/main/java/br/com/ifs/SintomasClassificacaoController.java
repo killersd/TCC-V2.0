@@ -2,18 +2,17 @@ package br.com.ifs;
 
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import springfox.documentation.schema.Model;
 
-@RestController
+@Controller
 //@RequestMapping(value = "/api")
 @Api(value = "API REST para a triagem de pacientes")
 @CrossOrigin(origins = "*")
@@ -26,7 +25,7 @@ public class SintomasClassificacaoController {
 
 	@PostMapping("/SintomasClassificacao")
 	@ApiOperation(value = "Insere a classificação de risco no banco de dados logo após o drools ter inferido-a")
-	public SintomasClassificacaoModel classificarPaciente(SintomasClassificacaoModel sintomasClassificacao) {
+	public String classificarPaciente(SintomasClassificacaoModel sintomasClassificacao) {
 		// @RequestBody
 
 		GrupoController gc = new GrupoController();
@@ -75,9 +74,11 @@ public class SintomasClassificacaoController {
 		System.out.println(objeto.getClassificacao());
 		System.out.println(objeto.getTempoAtendimentoMinutos());
 		System.out.println(objeto.getLocal());
-		return sintomasClassificacaoRepository.save(sintomasClassificacao);
+		sintomasClassificacaoRepository.save(sintomasClassificacao);
+		return "redirect:/classificacao_final";
 	}
 
+	
 	@GetMapping("/SintomasClassificacao")
 	@ApiOperation(value = "Retorna todas as classificações existentes no banco de dados")
 	public ModelAndView mostrarClassificacao(Model model) {
@@ -86,6 +87,7 @@ public class SintomasClassificacaoController {
 		mv.addObject("sintomasClassificacaoModel", sintomasClassificacaoModel);
 		return mv;
 	}	
+	
 	
 //	@GetMapping("/SintomasClassificacao/{id}")
 //	@ApiOperation(value = "Retorna uma classificação do banco quando passado um ID")

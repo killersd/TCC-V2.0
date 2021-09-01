@@ -1,45 +1,60 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
+<html xmlns:th="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-
 <head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
 <title>Classificação de Risco</title>
 </head>
 <body>
 
-	<form th:action="@{/SintomasClassificacao}" method="get">
-		<div align="center" class="container"
-			th:each="SintomasClassificacaoModel : ${sintomasClassificacaoModel}">
-			<div class="row">
-				-------------------------------------------------------------------------------------------------------------------
-				<h4 style="color: #ff0000">Resumo da Classificação</h4>
-				<p>
-					<span>Grupo: </span><span
-						th:text="${SintomasClassificacaoModel.grupo}"></span>
-				</p>
-				<p>
-					<span>Sintoma mais grave: </span><span
-						th:text="${SintomasClassificacaoModel.sintomas}"></span>
-				</p>
-				<p>
-					<span>Classificação: </span><span
-						th:text="${SintomasClassificacaoModel.classificacao}"></span>
-				</p>
-				<p>
-					<span>Local de Atendimento: </span><span
-						th:text="${SintomasClassificacaoModel.local}"></span>
-				</p>
-				<p>
-					<span>Tipo de Antendimento: </span><span
-						th:text="${SintomasClassificacaoModel.tempoAtendimentoImediato}"></span>
-				</p>
-				<p>
-					<span>Tempo de Espera (minutos): </span><span
-						th:text="${SintomasClassificacaoModel.tempoAtendimentoMinutos}"></span>
-				</p>
-			</div>
-		</div>
-	</form>
+	<div align="center">
+		<h3>
+			<a href="/grupos" class="waves-effect waves-light btn"><i
+				class="material-icons left">add_circle_outline</i>Nova Classificação</a>
+
+		</h3>
+		<h4 style="color: #ff0000">Classificações salvas no Banco</h4>
+		<table class="container">
+			<thead>
+				<tr>
+
+					<th>Classificação</th>
+					<th>Local de Atendimento</th>
+					<th>Tipo de Atendimento</th>
+					<th>Espera (minutos)</th>
+					<th>Grupo</th>
+					<th>Sintoma mais grave</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr
+					th:each="SintomasClassificacaoModel : ${sintomasClassificacaoModel}">
+
+					<td><span
+						th:text="${SintomasClassificacaoModel.classificacao}"></span></td>
+					<td><span th:text="${SintomasClassificacaoModel.local}"></span></td>
+					<td><span
+						th:text="${SintomasClassificacaoModel.tempoAtendimentoImediato}"></span></td>
+					<td><span
+						th:text="${SintomasClassificacaoModel.tempoAtendimentoMinutos}"></span></td>
+						<td><span th:text="${SintomasClassificacaoModel.grupo}"></span></td>
+					<td><span th:text="${SintomasClassificacaoModel.sintomas}"></span></td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
 </body>
 </html>
