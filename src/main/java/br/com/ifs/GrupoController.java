@@ -32,10 +32,10 @@ public class GrupoController {
 			return "redirect:/traumas";
 		}
 		if (grupo.equals("dores")) {
-			return "dores";
+			return "redirect:/dores";
 		}
-		if (grupo.equals("partes do corpo")) {
-			return "partes do corpo";
+		if (grupo.equals("partes_do_corpo")) {
+			return "redirect:/partes_do_corpo";
 		}
 		if (grupo.equals("outros")) {
 			return "outros";
@@ -58,8 +58,8 @@ public class GrupoController {
 		if (grupo.equals("dores")) {
 			return "dores";
 		}
-		if (grupo.equals("partes do corpo")) {
-			return "partes do corpo";
+		if (grupo.equals("partes_do_corpo")) {
+			return "partes_do_corpo";
 		}
 		if (grupo.equals("outros")) {
 			return "outros";

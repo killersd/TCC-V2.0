@@ -13,6 +13,11 @@
 			th:each="SintomasClassificacaoModel : ${sintomasClassificacaoModel}">
 			<div class="row">
 				-------------------------------------------------------------------------------------------------------------------
+				<h4 style="color: #ff0000">Resumo da Classificação</h4>
+				<p>
+					<span>Grupo: </span><span
+						th:text="${SintomasClassificacaoModel.grupo}"></span>
+				</p>
 				<p>
 					<span>Sintoma mais grave: </span><span
 						th:text="${SintomasClassificacaoModel.sintomas}"></span>
@@ -26,15 +31,15 @@
 						th:text="${SintomasClassificacaoModel.local}"></span>
 				</p>
 				<p>
-					<span>Tempo de Espera: </span><span
+					<span>Tipo de Antendimento: </span><span
+						th:text="${SintomasClassificacaoModel.tempoAtendimentoImediato}"></span>
+				</p>
+				<p>
+					<span>Tempo de Espera (minutos): </span><span
 						th:text="${SintomasClassificacaoModel.tempoAtendimentoMinutos}"></span>
 				</p>
 			</div>
 		</div>
 	</form>
-
-
-
-
 </body>
 </html>

@@ -488,3 +488,904 @@ rule "traumas_Respiracao_inadequada"
 	end
 //--------------------------------------------------------------------------------------------------------------------
 //Regras para o grupo TRAUMAS classificação LARANJA
+
+rule "traumas_Alteracao_subita_da_consciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Alteracao_subita_da_consciencia")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "traumas_Deficit_neurologico_agudo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Deficit_neurologico_agudo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "traumas_Dispineia_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Dispineia_aguda")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "traumas_Dor_intensa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Dor_intensa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "traumas_Evisceracao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Evisceracao")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "traumas_Hemorragia_maior_incontrolavel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Hemorragia_maior_incontrolavel")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "traumas_Mecanismo_de_trauma_significativo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Mecanismo_de_trauma_significativo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo TRAUMAS classificação AMARELA
+
+rule "traumas_Comorbidade_importante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Comorbidade_importante")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "traumas_Deficit_neurologico_novo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Deficit_neurologico_novo")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "traumas_Disturbio_de_coagulacao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Disturbio_de_coagulacao")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "traumas_Dor_moderada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Dor_moderada")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "traumas_Dor_pleuritica"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Dor_pleuritica")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "traumas_Hemorragia_menor_incontrolavel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Hemorragia_menor_incontrolavel")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "traumas_Historia_de_inconsciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Historia_de_inconsciencia")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+rule "traumas_Historia_discordante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Historia_discordante")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "traumas_Vomitos_persistentes"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Vomitos_persistentes")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+	
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo TRAUMAS classificação VERDE
+
+rule "traumas_Dor_leve_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Dor_leve_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+
+rule "traumas_Evento_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Evento_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+	
+rule "traumas_Hematoma_de_couro_cabeludo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Hematoma_de_couro_cabeludo")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+	
+rule "traumas_Vomitos"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="traumas" && Sintomas=="Vomitos")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo PROBLEMAS EM PARTES DO CORPO classificação VERMELHA
+
+rule "problemas_em_partes_do_corpo_Choque"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Choque")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "problemas_em_partes_do_corpo_Hemorragia_hexanguinante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Hemorragia_hexanguinante")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+
+rule "problemas_em_partes_do_corpo_Lesao_ocular_quimica_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Lesao_ocular_quimica_aguda")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+	
+rule "problemas_em_partes_do_corpo_Obstrucao_das_vias_aereas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Obstrucao_das_vias_aereas")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+
+rule "problemas_em_partes_do_corpo_Respiracao_inadequada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Respiracao_inadequada")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo PROBLEMAS EM PARTES DO CORPO classificação LARANJA	
+
+rule "problemas_em_partes_do_corpo_Adulto_muito_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Adulto_muito_quente")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "problemas_em_partes_do_corpo_Alteracao_subita_da_consciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Alteracao_subita_da_consciencia")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+
+rule "problemas_em_partes_do_corpo_Comprometimento_vascular_distal"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Comprometimento_vascular_distal")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "problemas_em_partes_do_corpo_Crianca_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Crianca_quente")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "problemas_em_partes_do_corpo_Dispineia_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dispineia_aguda")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end
+	
+rule "problemas_em_partes_do_corpo_Dor_intensa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dor_intensa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Hemorragia_maior_incontrolavel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Hemorragia_maior_incontrolavel")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Pele_critica"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Pele_critica")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Perda_total_da_visao_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Perda_total_da_visao_aguda")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Priaprismo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Priaprismo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Sangramento_vaginal_mais_de_20_semanas_de_gravidez"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Sangramento_vaginal_mais_de_20_semanas_de_gravidez")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Sangramento_vaginal_intenso"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Sangramento_vaginal_intenso")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Trauma_ocular_penetrante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Trauma_ocular_penetrante")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo PROBLEMAS EM PARTES DO CORPO classificação AMARELA
+
+rule "problemas_em_partes_do_corpo_Adulto_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Adulto_quente")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Avulcao_dentaria_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Avulcao_dentaria_aguda")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Colicas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Colicas")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Deficit_neurologico_novo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Deficit_neurologico_novo")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Deformidade_grosseira"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Deformidade_grosseira")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Disturbio_de_coagulacao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Disturbio_de_coagulacao")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Dor_abdominal"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dor_abdominal")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Dor_irradiada_para_o_ombro"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dor_irradiada_para_o_ombro")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Dor_moderada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dor_moderada")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Dor_pleuritica"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dor_pleuritica")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Fratura_exposta"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Fratura_exposta")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "problemas_em_partes_do_corpo_Gravidez_possivel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Gravidez_possivel")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Hematuria_franca"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Hematuria_franca")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Hemorragia_menor_incontrolavel"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Hemorragia_menor_incontrolavel")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Historia_de_inconsciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Historia_de_inconsciencia")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Historia_de_trauma_cranioencefalico"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Historia_de_trauma_cranioencefalico")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Historia_discordante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Historia_discordante")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Reducao_recente_da_acuidade_visual"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Reducao_recente_da_acuidade_visual")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Retencao_urinaria"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Retencao_urinaria")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Trauma_vaginal"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Trauma_vaginal")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+
+rule "problemas_em_partes_do_corpo_Vomitos_persistentes"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Vomitos_persistentes")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo PROBLEMAS EM PARTES DO CORPO classificação VERDE
+
+rule "problemas_em_partes_do_corpo_Diplopia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Diplopia")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+	
+rule "problemas_em_partes_do_corpo_Disuria"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Disuria")
+	then
+		offerObject.setClassificacao("VERDE");
+	end
+	
+rule "problemas_em_partes_do_corpo_Dor_leve_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Dor_leve_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Edema"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Edema")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Edema_facial"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Edema_facial")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "problemas_em_partes_do_corpo_Evento_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Evento_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Febril"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Febril")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Hematoma_de_orelha"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Hematoma_de_orelha")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Inchaco_na_face"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Inchaco_na_face")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
+	
+rule "problemas_em_partes_do_corpo_Olho_vermelho"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Olho_vermelho")
+	then
+		offerObject.setClassificacao("VERDE");
+	end			
+	
+rule "problemas_em_partes_do_corpo_Olhos_vermelhos"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Olhos_vermelhos")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "problemas_em_partes_do_corpo_Perda_recente_da_audicao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Perda_recente_da_audicao")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "problemas_em_partes_do_corpo_Sensacao_de_corpo_estranho"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Sensacao_de_corpo_estranho")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+	
+rule "problemas_em_partes_do_corpo_Sensibilidade_na_face_alterada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Sensibilidade_na_face_alterada")
+	then
+		offerObject.setClassificacao("VERDE");
+	end		
+
+rule "problemas_em_partes_do_corpo_Vertigem"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Vertigem")
+	then
+		offerObject.setClassificacao("VERDE");
+	end			
+	
+rule "problemas_em_partes_do_corpo_Vomitos"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="partes_do_corpo" && Sintomas=="Vomitos")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo DORES classificação VERMELHA
+	
+rule "dores_Baba-se"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Baba-se")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end		
+rule "dores_Choque"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Choque")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end		
+	
+rule "dores_Convulsionando"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Convulsionando")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end		
+	
+rule "dores_Crianca_nao_reativa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Crianca_nao_reativa")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end		
+	
+rule "dores_Estridor"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Estridor")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end		
+	
+rule "dores_Obstrucao_das_vias_aereas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Obstrucao_das_vias_aereas")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end		
+	
+rule "dores_Respiracao_inadequada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Respiracao_inadequada")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end	
+	
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo DORES classificação LARANJA
+
+rule "dores_Adulto_muito_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Adulto_muito_quente")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Alteracao_subita_da_consciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Alteracao_subita_da_consciencia")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Crianca_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Crianca_quente")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Deficit_neurologico_agudo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Deficit_neurologico_agudo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Dispineia_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dispineia_aguda")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Dor_abdominal"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dor_abdominal")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "dores_Dor_intensa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dor_intensa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end			
+	
+rule "dores_Dor_precordial_ou_cardiaca"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dor_precordial_ou_cardiaca")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Erupcao_cultanea_fixa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Erupcao_cultanea_fixa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "dores_Erupcao_fixa"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Erupcao_fixa")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end	
+	
+rule "dores_Gangrena_de_escroto"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Gangrena_de_escroto")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "dores_Idade_menor_que_25_anos"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Idade_menor_que_25_anos")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "dores_Inicio_abrupto"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Inicio_abrupto")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end			
+	
+rule "dores_Mecanismo_de_trauma_significativo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Mecanismo_de_trauma_significativo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "dores_Perda_total_da_visao_aguda"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Perda_total_da_visao_aguda")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end			
+	
+rule "dores_Pulso_anormal"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Pulso_anormal")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end			
+	
+rule "dores_Purpura"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Purpura")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end		
+	
+rule "dores_Sinais_de_meningismo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Sinais_de_meningismo")
+	then
+		offerObject.setClassificacao("LARANJA");
+	end			
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo DORES classificação AMARELA
+
+rule "dores_Adulto_quente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Adulto_quente")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Celulite_de_escroto"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Celulite_de_escroto")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Colicas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Colicas")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Couro_cabeludo_temporal_dolorido"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Couro_cabeludo_temporal_dolorido")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Deficit_neurologico_novo"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Deficit_neurologico_novo")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Disturbio_de_coagulacao"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Disturbio_de_coagulacao")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Dor_moderada"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dor_moderada")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Dor_pleuritica"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dor_pleuritica")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Historia_cardiaca_importante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Historia_cardiaca_importante")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Historia_de_inconsciencia"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Historia_de_inconsciencia")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Historia_de_trauma_cranioencefalico"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Historia_de_trauma_cranioencefalico")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Historia_de_viagem_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Historia_de_viagem_recente")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Historia_discordante"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Historia_discordante")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Incapaz_de_andar"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Incapaz_de_andar")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Inicio_subito"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Inicio_subito")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Reducao_recente_da_acuidade_visual"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Reducao_recente_da_acuidade_visual")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Trauma_direto_no_dorso"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Trauma_direto_no_dorso")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Trauma_direto_no_pescoco"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Trauma_direto_no_pescoco")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+
+rule "dores_Vomitos_persistentes"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Vomitos_persistentes")
+	then
+		offerObject.setClassificacao("AMARELA");
+	end	
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo DORES classificação VERDE
+
+rule "dores_Dor_leve_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Dor_leve_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "dores_Evento_recente"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Evento_recente")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "dores_Febril"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Febril")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "dores_Trauma_de_escroto"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Trauma_de_escroto")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+
+rule "dores_Vomitos"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="dores" && Sintomas=="Vomitos")
+	then
+		offerObject.setClassificacao("VERDE");
+	end	
+//--------------------------------------------------------------------------------------------------------------------
+//Regras para o grupo SINTOMAS COMUNS classificação VERMELHA
+
+
+
+
+
+
+
+
+
+	

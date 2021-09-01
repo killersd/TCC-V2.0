@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-	
+
 	@RequestMapping("/")
 	public String homeApp() {
 		return "index";
@@ -19,7 +19,17 @@ public class HomeController {
 	@RequestMapping("/traumas")
 	public String traumas() {
 		return "grupos/traumas";
-	}	
+	}
+
+	@RequestMapping("/partes_do_corpo")
+	public String problemasEmPartesDoCorpo() {
+		return "grupos/partes_do_corpo";
+	}
+
+	@RequestMapping("/dores")
+	public String dores() {
+		return "grupos/dores";
+	}
 	
 	@RequestMapping("/sintomas_classificacao")
 	public String sintomasClassificacao() {
