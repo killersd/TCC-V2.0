@@ -708,4 +708,288 @@ public class ControleGeralController {
 	
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
 	// Sintomas Comuns
+	
+	@GetMapping("/SintomasComuns/desmaioNoAdulto")
+	public String desmaioNoAdulto(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/desmaioNoAdulto";
+	}
+
+	@PostMapping("/SintomasComuns/desmaioNoAdulto")
+	public String desmaioNoAdulto(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/sintomas_classificacao";
+
+	}
+	
+	@GetMapping("/SintomasComuns/embriaguezAparente")
+	public String embriaguezAparente(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/embriaguezAparente";
+	}
+
+	@PostMapping("/SintomasComuns/embriaguezAparente")
+	public String embriaguezAparente(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/embriaguezAparente";
+
+	}
+	
+	@GetMapping("/SintomasComuns/feridas")
+	public String feridas(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/feridas";
+	}
+
+	@PostMapping("/SintomasComuns/feridas")
+	public String feridas(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/feridas";
+
+	}
+	
+	@GetMapping("/SintomasComuns/infeccoesLocaisAbcessos")
+	public String infeccoesLocaisAbcessos(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/infeccoesLocaisAbcessos";
+	}
+
+	@PostMapping("/SintomasComuns/infeccoesLocaisAbcessos")
+	public String infeccoesLocaisAbcessos(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/infeccoesLocaisAbcessos";
+
+	}
+	
+	
+	@GetMapping("/SintomasComuns/malEstarEmAdultos")
+	public String malEstarEmAdultos(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/malEstarEmAdultos";
+	}
+
+	@PostMapping("/SintomasComuns/malEstarEmAdultos")
+	public String malEstarEmAdultos(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/malEstarEmAdultos";
+
+	}
+	
+	@GetMapping("/SintomasComuns/diarreiaVomitos")
+	public String diarreiaVomitos(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/diarreiaVomitos";
+	}
+
+	@PostMapping("/SintomasComuns/diarreiaVomitos")
+	public String diarreiaVomitos(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/diarreiaVomitos";
+
+	}
+	
+	@GetMapping("/SintomasComuns/agressao")
+	public String agressao(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/agressao";
+	}
+
+	@PostMapping("/SintomasComuns/agressao")
+	public String agressao(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/agressao";
+
+	}
+	
+	
+	@GetMapping("/SintomasComuns/palpitacoes")
+	public String palpitacoes(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/palpitacoes";
+	}
+
+	@PostMapping("/SintomasComuns/palpitacoes")
+	public String palpitacoes(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/palpitacoes";
+
+	}
+	
+	@GetMapping("/SintomasComuns/diabetes")
+	public String diabetes(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/diabetes";
+	}
+
+	@PostMapping("/SintomasComuns/diabetes")
+	public String diabetes(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/diabetes";
+
+	}
+	
+	@GetMapping("/SintomasComuns/erupcaoCultanea")
+	public String erupcaoCultanea(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/erupcaoCultanea";
+	}
+
+	@PostMapping("/SintomasComuns/erupcaoCultanea")
+	public String erupcaoCultanea(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/erupcaoCultanea";
+
+	}
+	
+	@GetMapping("/SintomasComuns/dorAbdominalEmAdultos")
+	public String dorAbdominalEmAdultos(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/dorAbdominalEmAdultos";
+	}
+
+	@PostMapping("/SintomasComuns/dorAbdominalEmAdultos")
+	public String dorAbdominalEmAdultos(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/dorAbdominalEmAdultos";
+
+	}
+	
+	@GetMapping("/SintomasComuns/gravidez")
+	public String gravidez(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/gravidez";
+	}
+
+	@PostMapping("/SintomasComuns/gravidez")
+	public String gravidez(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/gravidez";
+
+	}
+	
+	@GetMapping("/SintomasComuns/quedas")
+	public String quedas(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/quedas";
+	}
+
+	@PostMapping("/SintomasComuns/quedas")
+	public String quedas(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/quedas";
+
+	}
+	
+	@GetMapping("/SintomasComuns/queimaduras")
+	public String queimaduras(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "SintomasComuns/queimaduras";
+	}
+
+	@PostMapping("/SintomasComuns/queimaduras")
+	public String queimaduras(
+
+			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
+		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
+
+		preencheSintomas();
+		definirPrioridade();
+
+		return "redirect:/queimaduras";
+
+	}
+	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
+	// Outros
 }

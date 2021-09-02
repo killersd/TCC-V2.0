@@ -31,6 +31,13 @@ public class HomeController {
 		return "grupos/dores";
 	}
 	
+	@RequestMapping("/sintomas_comuns")
+	public String sintomas_comuns() {
+		return "grupos/sintomas_comuns";
+	}
+	
+	
+	
 	@RequestMapping("/classificacao_final")
 	public String cf() {
 		return "classificacao_final";

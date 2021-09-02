@@ -44,8 +44,8 @@ public class GrupoController {
 		if (grupo.equals("outros")) {
 			return "outros";
 		}
-		if (grupo.equals("sintomas comuns")) {
-			return "sintomas comuns";
+		if (grupo.equals("sintomas_comuns")) {
+			return "redirect:/sintomas_comuns";
 		}
 		return "";
 	}
@@ -68,8 +68,8 @@ public class GrupoController {
 		if (grupo.equals("outros")) {
 			return "outros";
 		}
-		if (grupo.equals("sintomas comuns")) {
-			return "sintomas comuns";
+		if (grupo.equals("sintomas_comuns")) {
+			return "sintomas_comuns";
 		}
 		return "";
 	}

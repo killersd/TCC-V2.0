@@ -16,8 +16,8 @@
 </head>
 <nav class="green">
 	<div class="nav-wrapper">
-		<a href="#" class="brand-logo">Escolha
-			do grupo de fluxogramas desejado</a>
+		<a href="#" class="brand-logo">Escolha do grupo de fluxogramas
+			desejado</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
 
 			<li><a href="/"><i class="material-icons left">home</i></a></li>
@@ -26,7 +26,8 @@
 </nav>
 <body>
 	<div align="center">
-		<h4>Escolha o grupo</h4><br/>
+		<h4>Escolha o grupo</h4>
+		<br />
 		<form action="#" th:action="@{/grupos}"
 			th:object="${sintomasClassificacaoModel}" method="post">
 			<label> <input type="radio" th:field="*{grupo}"
@@ -36,7 +37,7 @@
 				type="radio" th:field="*{grupo}" value="partes_do_corpo" /><span>Partes
 					do corpo</span><br /></label> <label> <input type="radio"
 				th:field="*{grupo}" value="dores" /><span>Dores</span><br /></label><label>
-				<input type="radio" th:field="*{grupo}" value="sintomas comuns" /><span>Sintomas
+				<input type="radio" th:field="*{grupo}" value="sintomas_comuns" /><span>Sintomas
 					comuns</span><br />
 			</label> <label><input type="radio" th:field="*{grupo}"
 				value="outros" /><span>Outros</span><br /></label>
@@ -46,7 +47,138 @@
 				</button>
 		</form>
 	</div>
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
+	<div class="container">
+		<table class="table table-striped table-bordered minhatabela"
+			style="width: 100%">
+			<thead>
+				<tr>
+					<th>"Crianças"</th>
+					<th>"Traumas"</th>
+					<th>"Partes do Corpo"</th>
+					<th>"Dores"</th>
+					<th>"Sintomas Comuns"</th>
+					<th>"Outros"</th>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td><span>Bebê Chorando</span></td>
+					<td><span>Trauma Crânioencefálico</span></td>
+					<td><span>Problemas Dentários</span></td>
+					<td><span>Dor Cervical</span></td>
+					<td><span>Demaio no Adulto</span></td>
+					<td><span>Alergia</span></td>
+				</tr>
+				<tr>
+					<td><span>Criança Irritadiça</span></td>
+					<td><span>Trauma Maior</span></td>
+					<td><span>Problemas em Extremidades</span></td>
+					<td><span>Dor de Garganta</span></td>
+					<td><span>Embriaguez Aparente</span></td>
+					<td><span>Alteração do Comportamento</span></td>
+				</tr>
+				<tr>
+					<td><span>Criança Mancando</span></td>
+					<td><span>Trauma Toracoabdominal</span></td>
+					<td><span>Problemas em Face</span></td>
+					<td><span>Dor Lombar</span></td>
+					<td><span>Feridas</span></td>
+					<td><span>Asma</span></td>
+				</tr>
+				<tr>
+					<td><span>Mal estar em Crianças</span></td>
+					<td><span></span></td>
+					<td><span>Problemas em Olhos</span></td>
+					<td><span>Dor Testicular</span></td>
+					<td><span>Infecções locais e Abcessos</span></td>
+					<td><span>Autoagressão</span></td>
+				</tr>
+				<tr>
+					<td><span>Dispinéia em Crianças</span></td>
+					<td><span></span></td>
+					<td><span>Problemas em Ouvido</span></td>
+					<td><span>Dor Toráxica</span></td>
+					<td><span>Mal estar em Adultos</span></td>
+					<td><span>Convulsões</span></td>
+
+				</tr>
+				<tr>
+					<td><span>Dor abdominal em Crianças</span></td>
+					<td><span></span></td>
+					<td><span>Problemas Urinários</span></td>
+					<td><span>Cefaléia</span></td>
+					<td><span>Diarréia e/ou Vômitos</span></td>
+					<td><span>Dispinéia em Adultos</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Sangramento Vaginal</span></td>
+					<td><span></span></td>
+					<td><span>Agressão</span></td>
+					<td><span>Exposição à Agentes Químicos</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Palpitações</span></td>
+					<td><span>Hemorragia Digestiva</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Diabetes</span></td>
+					<td><span>Mordedura e Picadas</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Erupção Cultânea</span></td>
+					<td><span>Overdose e Envenenamento</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Dor Abdominal em Adultos</span></td>
+					<td><span>Pais Preocupados</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Gravidez</span></td>
+					<td><span>Doença Mental</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Quedas</span></td>
+					<td><span>Corpo Estranho</span></td>
+				</tr>
+				<tr>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span>Queimaduras</span></td>
+					<td><span>Doença Sexualmente transmissível</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
