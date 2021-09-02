@@ -30,7 +30,6 @@ public class SintomasClassificacaoController {
 
 		GrupoController gc = new GrupoController();
 		ControleGeralController bcc = new ControleGeralController();
-
 		sintomasClassificacao.setGrupo(gc.grupoString());
 		System.out.println("Grupo que veio de GrupoController: " + gc.grupoString());
 		System.out.println("Grupo que chegou no controller: " + sintomasClassificacao.getGrupo());
@@ -71,9 +70,9 @@ public class SintomasClassificacaoController {
 		objeto.setGrupo(sintomasClassificacao.getGrupo());
 		objeto.setSintomas(sintomasClassificacao.getSintomas());
 		objeto.setTempoAtendimentoImediato(sintomasClassificacao.getTempoAtendimentoImediato());
-		System.out.println(objeto.getClassificacao());
-		System.out.println(objeto.getTempoAtendimentoMinutos());
-		System.out.println(objeto.getLocal());
+		System.out.println("CLassificação: "+objeto.getClassificacao());
+		System.out.println("Tempo de atendimento: "+objeto.getTempoAtendimentoMinutos());
+		System.out.println("Local de atendimento: "+objeto.getLocal());
 		sintomasClassificacaoRepository.save(sintomasClassificacao);
 		return "redirect:/classificacao_final";
 	}

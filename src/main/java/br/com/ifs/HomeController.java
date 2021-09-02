@@ -40,6 +40,13 @@ public class HomeController {
 	public String cff() {
 		return "grupo_registrado";
 	}
+	@RequestMapping("/testeCheckbox")
+	public String testeCheckbox() {
+		return "testeCheckbox";
+	}
+	
+	
+	
 	
 	@RequestMapping("/sintomas_classificacao")
 	public String sintomasClassificacao() {

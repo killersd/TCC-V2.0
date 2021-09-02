@@ -2,9 +2,12 @@ package br.com.ifs;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import io.swagger.annotations.ApiOperation;
 
@@ -21,8 +24,9 @@ public class GrupoController {
 
 	@PostMapping("/grupos")
 	public String submeterGrupo(
-			@ModelAttribute("sintomasclassificacao") SintomasClassificacaoModel sintomasClassificacaoModel) {
-		this.grupo = sintomasClassificacaoModel.getGrupo();
+			@ModelAttribute("sintomasclassificacao") @Validated SintomasClassificacaoModel sintomasClassificacaoModel) {
+		this.grupo = sintomasClassificacaoModel.getGrupo();	
+		
 		System.out.println(grupo);
 		
 		if (grupo.equals("criancas")) {

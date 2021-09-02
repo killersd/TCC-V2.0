@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
 <title>Dores</title>
 </head>
+<nav class="green">
+	<div class="nav-wrapper">
+		<a href="#" class="brand-logo">Fluxogramas para dores</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="/grupos" class="waves-effect waves-light btn">
+					<i class="material-icons left">arrow_back</i>Voltar para grupos
+			</a></li>
+			<li><a href="/"><i class="material-icons left">home</i></a></li>
+			</a>
+		</ul>
+	</div>
+</nav>
 <body>
 	<div align="center">
 		<form>
-			<h2>Fluxogramas para Dores</h2>
+			<h4>Selecione o fluxograma desejado</h4>
+			<br />
 			<div>
 				<a href="/Dores/dorCervical" style="width: 300px">Dor Cervical</a>
 
 			</div>
 			<br />
 			<div>
-				<a href="/Dores/dorDeGarganta" style="width: 300px">Dor de Garganta</a>
+				<a href="/Dores/dorDeGarganta" style="width: 300px">Dor de
+					Garganta</a>
 			</div>
 			<br />
 			<div>
@@ -22,7 +46,8 @@
 			</div>
 			<br />
 			<div>
-				<a href="/Dores/dorTesticular" style="width: 300px">Dor Testicular</a>
+				<a href="/Dores/dorTesticular" style="width: 300px">Dor
+					Testicular</a>
 			</div>
 			<br />
 			<div>
@@ -32,13 +57,10 @@
 			<div>
 				<a href="/Dores/cefaleia" style="width: 300px">Cefaléia</a>
 			</div>
-			<br />
-			<div>
-				<a href="/grupos" style="width: 300px">Voltar para grupos</a>
-			</div>
-			<br />
+			<br /> <br />
 		</form>
 	</div>
-
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 </html>
