@@ -7,8 +7,7 @@
 	rel="stylesheet" />
 <!--Import materialize.css-->
 <link type="text/css" rel="stylesheet"
-	href="materialize/css/materialize.min.css"
-	media="screen,projection" />
+	href="materialize/css/materialize.min.css" media="screen,projection" />
 
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,14 +35,23 @@ label {
 <body>
 	<div align="center" class="container">
 		<p>
-		<form action="#" th:action="@{/Dores/cefaleia}"
+		<form action="#" th:action="@{/Criancas/bebeChorando}"
 			th:object="${sintomasClassificacaoModel}" method="post">
 
 
 
 			<div class="col-md-12">
 				<div class="col-md-6">
-					<label ><input type="checkbox"  value="Crianca_nao_reativa"> <span>Criança não reativa</span></label>
+					<label><input type="checkbox" value="Crianca_nao_reativa">
+						<span>Criança não reativa</span></label>
+				</div>
+				<div>
+					<label> <input type="hidden" name="_mySwitch"
+						th:value="Obstrucao_das_vias_aereas ? 'on'"> <input
+						type="checkbox" id="mySwitch1" name="mySwitch"
+						th:value="Obstrucao_das_vias_aereas ? 'true'"
+						th:checked="Obstrucao_das_vias_aereas ? 'true'"> <span>Obstrução das vias aéreas</span>
+					</label>
 				</div>
 			</div>
 			<p>
@@ -57,6 +65,17 @@ label {
 	</div>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
 
 </body>
+<script type="text/javascript">
+	$('#mySwitch1').click(function(){
+		   if ($(this).is(":checked")){
+		      $(this).val('true');
+		      $('#_mySwitch').val('on');
+		   }else{
+		      $('#_mySwitch').val('');
+		   }
+		});
+	</script>
 </html>

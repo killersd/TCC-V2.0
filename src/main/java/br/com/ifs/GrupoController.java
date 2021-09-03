@@ -41,11 +41,11 @@ public class GrupoController {
 		if (grupo.equals("partes_do_corpo")) {
 			return "redirect:/partes_do_corpo";
 		}
-		if (grupo.equals("outros")) {
-			return "outros";
-		}
 		if (grupo.equals("sintomas_comuns")) {
 			return "redirect:/sintomas_comuns";
+		}
+		if (grupo.equals("outros")) {
+			return "redirect:/outros";
 		}
 		return "";
 	}

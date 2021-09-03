@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="ISO-8859-1">
-<title>Erup��o Cultanea</title>
+
+<meta charset="UTF-8">
+<title>Erupção Cultânea</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
 </head>
 <body>
+	<div class="container" align="center">
+		<h3>Fluxograma 27 - Erupção Cultânea</h3>
+		<p>
+		<form action="#" th:action="@{/SintomasComuns/erupcaoCultanea}"
+			th:object="${sintomasClassificacaoModel}" method="post">
 
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+
+			<input type="checkbox" th:field="*{sintomas}" id="477" value="Choque">
+			<label for="477">Choque</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Crianca_nao_reativa"> <label for="10">Crianca_nao_reativa</label>
+
+
+					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Estridor"> <label for="11">Estridor</label> <input
+						type="checkbox" th:field="*{sintomas}" id="12"
+						value="Edema_facial"> <label for="12">Edema_facial</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Edema_de_lingua"> <label for="12">Edema_de_lingua</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Dispineia_aguda"> <label for="13">Dispineia_aguda</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Alteracao_subita_da_consciencia"> <label for="16">Alteracao_subita_da_consciencia</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Historia_alergica_importante"> <label for="17">Historia_alergica_importante</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="227"
+						value="Erupcao_cultanea_fixa"> <label for="227">Erupcao_cultanea_fixa</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="247"
+						value="Purpura"> <label for="247">Purpura</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="24711"
+						value="Adulto_muito_quente"> <label for="24711">Adulto_muito_quente</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="24722"
+						value=Crianca_quente> <label for="24722">Crianca_quente</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="24as722"
+						value="Dor_ou_coceira_intensas"> <label for="24as722">Dor_ou_coceira_intensas</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="2423711"
+						value="Erupcao_ou_vesiculas_disseminadas"> <label
+						for="2423711">Erupcao_ou_vesiculas_disseminadas</label> <input
+						type="checkbox" th:field="*{sintomas}" id="2423722"
+						value=Historia_discordante> <label for="2423722">Historia_discordante</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="24a2s722"
+						value="Adulto_quente"> <label for="24a2s722">Adulto_quente</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="24237"
+						value="Dor_ou_coceira_moderadas"> <label for="24237">Dor_ou_coceira_moderadas</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="24231"
+						value="Febril"> <label for="24231">Febril</label> <input
+						type="checkbox" th:field="*{sintomas}" id="24711"
+						value="Dor_ou_coceira_leve_recente"> <label for="24711">Dor_ou_coceira_leve_recente</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="2ed4237"
+						value="Evento_recente"> <label for="2ed4237">Evento_recente</label>
+				</div>
+			</div>
+
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/sintomas_comuns" style="width: 300px">Voltar para a
+						tela de fluxograma para Sintomas Comuns</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

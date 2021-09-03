@@ -1,10 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="ISO-8859-1">
+
+<meta charset="UTF-8">
 <title>Queimaduras</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
 </head>
 <body>
+	<div class="container" align="center">
+		<h3>Fluxograma 46 - Queimaduras</h3>
+		<p>
+		<form action="#" th:action="@{/SintomasComuns/queimaduras}"
+			th:object="${sintomasClassificacaoModel}" method="post">
 
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="8"
+						value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+						das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}"
+						id="9" value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="477"
+						value="Choque"> <label for="477">Choque</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Crianca_nao_reativa"> <label for="10">Crianca_nao_reativa</label>
+					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Estridor"> <label for="11">Estridor</label> <input
+						type="checkbox" th:field="*{sintomas}" id="12"
+						value="Edema_facial"> <label for="12">Edema_facial</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Lesao_por_inalacao"> <label for="12">Lesao_por_inalacao</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Dispineia_aguda"> <label for="13">Dispineia_aguda</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Mecanismo_de_trauma_significativo"> <label for="16">Mecanismo_de_trauma_significativo</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Alteracao_subita_da_consciencia"> <label for="17">Alteracao_subita_da_consciencia</label>
+					<input type="checkbox" th:field="*{sintomas}" id="227"
+						value="Sat_O2_muito_baixa"> <label for="227">Sat_O2_muito_baixa</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="247"
+						value="Dor_intensa"> <label for="247">Dor_intensa</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="24711"
+						value="Sat_O2_baixa"> <label for="24711">Sat_O2_baixa</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="24722"
+						value=Inalacao_de_fumaca> <label for="24722">Inalacao_de_fumaca</label>
+					<input type="checkbox" th:field="*{sintomas}" id="24as722"
+						value="Historia_discordante"> <label for="24as722">Historia_discordante</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="2423711"
+						value="Queimadura_eletrica"> <label for="2423711">Queimadura_eletrica</label>
+					<input type="checkbox" th:field="*{sintomas}" id="2423722"
+						value=Queimadura_quimica> <label for="2423722">Queimadura_quimica</label>
+					<input type="checkbox" th:field="*{sintomas}" id="24a2s722"
+						value="Dor_moderada"> <label for="24a2s722">Dor_moderada</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Inflamacao_local"> <label>Inflamacao_local</label>
+					<input type="checkbox" th:field="*{sintomas}" value=Infeccao_local>
+					<label>Infeccao_local</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Dor_leve"> <label>Dor_leve</label>
+				</div>
+			</div>
+			<input type="checkbox" th:field="*{sintomas}" value="Evento_recente">
+			<label>Evento_recente</label>
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/sintomas_comuns" style="width: 300px">Voltar para a
+						tela de fluxograma para Sintomas Comuns</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

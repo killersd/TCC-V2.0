@@ -1380,7 +1380,12 @@ rule "dores_Vomitos"
 //--------------------------------------------------------------------------------------------------------------------
 //Regras para o grupo SINTOMAS COMUNS classificação VERMELHA
 
-
+rule "sintomas_comuns_Obstrucao_das_vias_aereas"
+	when 
+		offerObject: SintomasClassificacaoModel(Grupo=="sintomas_comuns" && Sintomas=="Obstrucao_das_vias_aereas")
+	then
+		offerObject.setClassificacao("VERMELHA");
+	end	
 
 
 
