@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="ISO-8859-1">
-<title>Autoagressao</title>
+
+<meta charset="UTF-8">
+<title>Autoagressão</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
 </head>
 <body>
 
+
+	<div class="container" align="center">
+<h3>Fluxograma 05 - Autoagressão</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/autoagressao}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477" value="Hemorragia_hexanguinante">
+			<label for="477">Hemorragia_hexanguinante</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Choque"> <label for="10">Choque</label>
+
+
+					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Dispineia_aguda"> <label for="11">Dispineia_aguda</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Hemorragia_maior_incontrolavel"> <label for="12">Hemorragia_maior_incontrolavel</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Alteracao_subita_da_consciencia"> <label for="12">Alteracao_subita_da_consciencia</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Mecanismo_de_trauma_significativo"> <label for="13">Mecanismo_de_trauma_significativo</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Alto_risco_de_nova_agressao"> <label for="16">Alto_risco_de_nova_agressao</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Dor_intensa"> <label for="17">Dor_intensa</label>
+				</div>
+			</div>
+
+			
+			
+			<p>
+			<div>
+				<button type="submit">Ir para classificação
+				</button>
+							<div>
+				<a href="/outros" style="width: 300px">Voltar para a tela de
+					outros fluxogramas</a>
+			</div>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
 </body>
 </html>

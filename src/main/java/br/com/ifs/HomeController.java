@@ -51,6 +51,11 @@ public class HomeController {
 		return "grupo_registrado";
 	}
 
+	@RequestMapping("/modal")
+	public String modal() {
+		return "modal";
+	}
+	
 	@RequestMapping("/testeCheckbox")
 	public String testeCheckbox() {
 		return "testeCheckbox";

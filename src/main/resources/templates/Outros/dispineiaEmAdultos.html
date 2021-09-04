@@ -1,10 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="ISO-8859-1">
-<title>Dispin�ia em Adultos</title>
+
+<meta charset="UTF-8">
+<title>Dispinéia em Adultos</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
 </head>
 <body>
 
+
+	<div class="container" align="center">
+		<h3>Fluxograma 15 - Dispinéia em Adultos</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/dispineiaEmAdultos}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Estridor"> <label for="477">Estridor</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Baba-se"> <label for="10">Baba-se</label> <input
+						type="checkbox" th:field="*{sintomas}" id="11"
+						value="Choque"> <label for="11">Choque</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Dor_precordial_ou_cardiaca"> <label for="12">Dor_precordial_ou_cardiaca</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Sat_O2_muito_baixa"> <label for="12">Sat_O2_muito_baixa</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Frases_entrecortadas"> <label for="13">Frases_entrecortadas</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Hemoptise"> <label for="16">Hemoptise</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Historia_respiratoria_significativa"> <label
+						for="17">Historia_respiratoria_significativa</label> <input
+						type="checkbox" th:field="*{sintomas}" id="16"
+						value="Inicio_agudo_apos_trauma"> <label for="16">Inicio_agudo_apos_trauma</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Pulso_anormal"> <label for="16">Pulso_anormal</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="aaa17"
+						value="Alteracao_subita_da_consciencia"> <label for="aaa17">Alteracao_subita_da_consciencia</label>
+					<input type="checkbox" th:field="*{sintomas}" id="aaa16"
+						value="Exaustao"> <label for="aaa16">Exaustao</label>
+					<input type="checkbox" th:field="*{sintomas}" id="aaas16"
+						value="Dor_epigastrica"> <label
+						for="aaas16">Dor_epigastrica</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="PFE_muito_baixo"> <label>PFE_muito_baixo</label> <input
+						type="checkbox" th:field="*{sintomas}" value="Sat_O2_baixa">
+					<label>Sat_O2_baixa</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Historia_de_hemoptise"> <label>Historia_de_hemoptise</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Dor_pleuritica"> <label>Dor_pleuritica</label> <input
+						type="checkbox" th:field="*{sintomas}" value="Febril">
+					<label>Febril</label> <input type="checkbox"
+						th:field="*{sintomas}" value="PFE_baixo"> <label>PFE_baixo</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Chieira"> <label>Chieira</label> <input
+						type="checkbox" th:field="*{sintomas}" value="Tosse_produtiva">
+					<label>Tosse_produtiva</label> 
+					<input
+						type="checkbox" th:field="*{sintomas}" value="Trauma_toraxico">
+					<label>Trauma_toraxico</label> 
+				</div>
+			</div>
+			<input type="checkbox" th:field="*{sintomas}"
+						value="Evento_recente"> <label>Evento_recente</label>
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

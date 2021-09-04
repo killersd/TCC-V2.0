@@ -1,10 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="ISO-8859-1">
+
+<meta charset="UTF-8">
 <title>Hemorragia Digestiva</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
 </head>
 <body>
 
+
+	<div class="container" align="center">
+		<h3>Fluxograma 31 - Hemorragia Digestiva</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/hemorragiaDigestiva}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Hemorragia_hexanguinante"> <label for="477">Hemorragia_hexanguinante</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Choque"> <label for="10">Choque</label>
+					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Vomito_de_sangue"> <label for="11">Vomito_de_sangue</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Evacuacao_de_sangue_vivo_ou_escurecido"> <label for="12">Evacuacao_de_sangue_vivo_ou_escurecido</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Historia_de_hemorragia_digestiva_importante"> <label for="12">Historia_de_hemorragia_digestiva_importante</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Alteracao_subita_da_consciencia"> <label for="13">Alteracao_subita_da_consciencia</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Dor_intensa"> <label for="16">Dor_intensa</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Fezes_pretas_ou_em_groselha"> <label
+						for="17">Fezes_pretas_ou_em_groselha</label> <input
+						type="checkbox" th:field="*{sintomas}" id="16"
+						value="Historia_aguda_de_vomito_de_sangue"> <label for="16">Historia_aguda_de_vomito_de_sangue</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Disturbio_de_coagulacao"> <label for="16">Disturbio_de_coagulacao</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="aaa17"
+						value="Vomitos_persistentes"> <label
+						for="aaa17">Vomitos_persistentes</label> <input
+						type="checkbox" th:field="*{sintomas}" id="aaa16" value="Dor_moderada">
+					<label for="aaa16">Dor_moderada</label> <input type="checkbox"
+						th:field="*{sintomas}" id="aaas16" value="Vomitos">
+					<label for="aaas16">Vomitos</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Dor_leve_recente"> <label>Dor_leve_recente</label><input type="checkbox"
+						th:field="*{sintomas}" value="Dor_moderada"> <label>Evento_recente</label>
+				</div>
+			</div>
+			
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

@@ -25,31 +25,38 @@ public class GrupoController {
 	@PostMapping("/grupos")
 	public String submeterGrupo(
 			@ModelAttribute("sintomasclassificacao") @Validated SintomasClassificacaoModel sintomasClassificacaoModel) {
-		this.grupo = sintomasClassificacaoModel.getGrupo();	
-		
-		System.out.println(grupo);
-		
-		if (grupo.equals("criancas")) {
-			return "redirect:/criancas";
+
+		try {
+			this.grupo = sintomasClassificacaoModel.getGrupo();
+
+			System.out.println(grupo);
+
+			if (grupo.equals("criancas")) {
+				return "redirect:/criancas";
+			}
+			if (grupo.equals("traumas")) {
+				return "redirect:/traumas";
+			}
+			if (grupo.equals("dores")) {
+				return "redirect:/dores";
+			}
+			if (grupo.equals("partes_do_corpo")) {
+				return "redirect:/partes_do_corpo";
+			}
+			if (grupo.equals("sintomas_comuns")) {
+				return "redirect:/sintomas_comuns";
+			}
+			if (grupo.equals("outros")) {
+				return "redirect:/outros";
+			}
+		} catch (Exception e) {
+			System.out.println("Grupo não pode ser vazio");
+			return "redirect:/erroClassificacao";
 		}
-		if (grupo.equals("traumas")) {
-			return "redirect:/traumas";
-		}
-		if (grupo.equals("dores")) {
-			return "redirect:/dores";
-		}
-		if (grupo.equals("partes_do_corpo")) {
-			return "redirect:/partes_do_corpo";
-		}
-		if (grupo.equals("sintomas_comuns")) {
-			return "redirect:/sintomas_comuns";
-		}
-		if (grupo.equals("outros")) {
-			return "redirect:/outros";
-		}
+
 		return "";
 	}
-	
+
 	@ApiOperation(value = "Armazena o grupo escolhido pelo usuário, para posteriormente setá-lo no objeto que será usado no "
 			+ "no metodo para classificar o paciente")
 	public String grupoString() {
