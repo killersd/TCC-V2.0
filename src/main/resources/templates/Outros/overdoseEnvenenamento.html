@@ -1,10 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="ISO-8859-1">
-<title>Overdose ou Envenenamento</title>
+
+<meta charset="UTF-8">
+<title>Overdose e Envenenamento</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
 </head>
 <body>
 
+
+	<div class="container" align="center">
+		<h3>Fluxograma 36 - Overdose e Envenenamento</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/overdoseEnvenenamento}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Choque"> <label for="477">Choque</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Crianca_nao_reativa"> <label for="10">Crianca_nao_reativa</label> <input
+						type="checkbox" th:field="*{sintomas}" id="11" value="Hipoglicemia">
+					<label for="11">Hipoglicemia</label> <input type="checkbox"
+						th:field="*{sintomas}" id="12" value="Convulsionando"> <label
+						for="12">Convulsionando</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Pulso_anormal"> <label for="12">Pulso_anormal</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Mortalidade_alta"> <label for="13">Mortalidade_alta</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Alteracao_subita_da_consciencia"> <label for="16">Alteracao_subita_da_consciencia</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Alto_risco_de_nova_agressao"> <label for="17">Alto_risco_de_nova_agressao</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Sat_O2_muito_baixa"> <label for="16">Sat_O2_muito_baixa</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Mortalidade_moderada"> <label for="16">Mortalidade_moderada</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="aaa17"
+						value="Risco_moderado_de_nova_autoagressao"> <label for="aaa17">Risco_moderado_de_nova_autoagressao</label>
+					<input type="checkbox" th:field="*{sintomas}" id="aaa16"
+						value="Historia_psiquiatrica_importante"> <label for="aaa16">Historia_psiquiatrica_importante</label>
+					<input type="checkbox" th:field="*{sintomas}" id="aaas16"
+						value="Historia_de_inconsciencia"> <label for="aaas16">Historia_de_inconsciencia</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Agitacao_psicomotora"> <label>Agitacao_psicomotora</label>
+					<input type="checkbox" th:field="*{sintomas}" value="Sat_O2_baixa">
+					<label>Sat_O2_baixa</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Historia_discordante">
+					<label>Historia_discordante</label>
+				</div>
+			</div>
+		
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

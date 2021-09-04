@@ -21,13 +21,13 @@ public class ControleGeralController {
 			"Estridor","Hemorragia_hexanguinante","Hiperglicemia","Hipoglicemia","Lesao_ocular_quimica_aguda",
 			"Nao_reativa","Obstrucao_das_vias_aereas","Prolapso_de_cordao_umbilical","Respiracao_inadequada",
 			
-			"Adulto_muito_quente", "Inicio_abrupto", "Alteracao_da_consciencia_nao_totalmente_atribuida_ao_alcool","Alteracao_subita_da_consciencia","Alto_risco_de_agredir_os_outros","Alto_risco_de autoagressao","Alto_risco_de_nova_agressao",
+			"Adulto_muito_quente", "Inicio_abrupto", "Alteracao_da_consciencia_nao_totalmente_atribuida_ao_alcool","Alteracao_subita_da_consciencia","Alto_risco_de_agredir_os_outros","Alto_risco_de_autoagressao","Alto_risco_de_nova_agressao",
 			"Comprometimento_vascular_distal","Crianca_quente","Deficit_neurologico_agudo","Dispineia_aguda","Dor_abdominal",
 			"Dor_epigastrica","Dor_intensa","Dor_que_irradia_para_o_dorso","Dor_ou_coceira_intensas","Dor_precordial_ou_cardiaca",
-			"Edema_de_lingua","Edema_facial","Enfisema_subcultaneo","Erupcao_cultanea_fixa","Erupcao_fixa","Esforco_respiratorio_aumentado",
+			"Edema_de_lingua","Edema_facial","Envenenamento_de_alta_mortalidade","Enfisema_subcultaneo","Erupcao_cultanea_fixa","Erupcao_fixa","Esforco_respiratorio_aumentado",
 			"Evacuacao_de_sangue_vivo_ou_escurecido","Exaustao","Evisceracao","Frases_entrecortadas","Gangrena_de_escroto","Hemoptise",
 			"Hemorragia_maior_incontrolavel","Hiperglicemia_com_cetose","Hipotermia","Hipotonia","Historia_alergica_importante",
-			"Historia_de_alergia_importante","Historia_de_overdose_ou_envenenamento","Historia_inadequada","Historia_respiratoria_significativa","Historia_de_convulsao",
+			"Historia_de_alergia_importante","Historia_de_hemorragia_digestiva_importante","Historia_de_overdose_ou_envenenamento","Historia_inadequada","Historia_respiratoria_significativa","Historia_de_convulsao",
 			"Idade_menor_que_25_anos","Inicio_agudo_apos_trauma","Lesao_por_inalacao","Mecanismo_de_trauma_significativo","Mortalidade_alta","Nao_reage_aos_pais",
 			"Perda_total_da_visao_aguda","PFE_muito_baixo","Prostracao","Prostracao_e_hipotonia","Pulso_anormal",
 			"Purpura","Resposta_a_voz_ou_a_dor_apenas","Risco_de_contaminacao_persistente","Risco_especial_de_infeccao","Sangramento_vaginal_mais_de_20_semanas_de_gravidez","Sangramento_vaginal_intenso",
@@ -76,7 +76,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Alteracao_da_consciencia_nao_totalmente_atribuida_ao_alcool", 2);
 		sintomas_e_prioridades.put("Alteracao_subita_da_consciencia", 2);
 		sintomas_e_prioridades.put("Alto_risco_de_agredir_os_outros", 2);
-		sintomas_e_prioridades.put("Alto_risco_de autoagressao", 2);
+		sintomas_e_prioridades.put("Alto_risco_de_autoagressao", 2);
 		sintomas_e_prioridades.put("Alto_risco_de_nova_agressao", 2);
 		sintomas_e_prioridades.put("Comprometimento_vascular_distal", 2);
 		sintomas_e_prioridades.put("Crianca_quente", 2);
@@ -90,6 +90,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Dor_precordial_ou_cardiaca", 2);
 		sintomas_e_prioridades.put("Edema_de_lingua", 2);
 		sintomas_e_prioridades.put("Enfisema_subcultaneo", 2);
+		sintomas_e_prioridades.put("Envenenamento_de_alta_mortalidade", 2);
 		sintomas_e_prioridades.put("Edema_facial", 2);
 		sintomas_e_prioridades.put("Erupcao_cultanea_fixa", 2);
 		sintomas_e_prioridades.put("Erupcao_fixa", 2);
@@ -106,6 +107,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Hipotonia", 2);
 		sintomas_e_prioridades.put("Historia_alergica_importante", 2);
 		sintomas_e_prioridades.put("Historia_de_alergia_importante", 2);
+		sintomas_e_prioridades.put("Historia_de_hemorragia_digestiva_importante", 2);
 		sintomas_e_prioridades.put("Historia_de_overdose_ou_envenenamento", 2);
 		sintomas_e_prioridades.put("Historia_inadequada", 2);
 		sintomas_e_prioridades.put("Historia_respiratoria_significativa", 2);
@@ -158,6 +160,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Dor_ou_coceira_moderadas", 3);
 		sintomas_e_prioridades.put("Dor_pleuritica", 3);
 		sintomas_e_prioridades.put("Dor_testicular", 3);
+		sintomas_e_prioridades.put("Envenenamento_de_moderada_mortalidade", 3);
 		sintomas_e_prioridades.put("Erupcao_ou_vesiculas_disseminadas", 3);
 		sintomas_e_prioridades.put("Fezes_pretas_ou_em_groselha", 3);
 		sintomas_e_prioridades.put("Fratura_exposta", 3);
@@ -246,9 +249,8 @@ public class ControleGeralController {
 		String sintomaMaisGrave;
 		int maiorPrioridade = 10;
 
-		for (int i = 0; i <= 179; i++) {
+		for (int i = 0; i <= 181; i++) {
 			if (sintomasSelecionados.contains(sintomasVetor[i])) {
-				System.out.println("ENTROU AQUI");
 				if (sintomas_e_prioridades.get(sintomasVetor[i]).intValue() < maiorPrioridade) {
 					maiorPrioridade = sintomas_e_prioridades.get(sintomasVetor[i]).intValue();
 					sintomaMaisGrave = sintomasVetor[i];
@@ -1017,7 +1019,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/alergia";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/alteracaoDoComportamento")
@@ -1036,7 +1038,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/alteracaoDoComportamento";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/asma")
@@ -1055,7 +1057,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/asma";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/autoagressao")
@@ -1074,7 +1076,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/autoagressao";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/convulsoes")
@@ -1093,7 +1095,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/convulsoes";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/dispineiaEmAdultos")
@@ -1112,7 +1114,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/dispineiaEmAdultos";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/exposicaoAgentesQuimicos")
@@ -1131,7 +1133,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/exposicaoAgentesQuimicos";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/hemorragiaDigestiva")
@@ -1150,7 +1152,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/hemorragiaDigestiva";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/mordeduraPicadas")
@@ -1169,7 +1171,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/mordeduraPicadas";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/overdoseEnvenenamento")
@@ -1188,7 +1190,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/overdoseEnvenenamento";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/paisPreocupados")
@@ -1207,7 +1209,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/paisPreocupados";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/doencaMental")
@@ -1226,7 +1228,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/doencaMental";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/corpoEstranho")
@@ -1245,7 +1247,7 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/corpoEstranho";
+		return "redirect:/sintomas_classificacao";
 	}
 	
 	@GetMapping("/Outros/dst")
@@ -1264,6 +1266,20 @@ public class ControleGeralController {
 		preencheSintomas();
 		definirPrioridade();
 
-		return "redirect:/dst";
+		return "redirect:/sintomas_classificacao";
+	}
+	
+	@GetMapping("/erroClassificacao")
+	public String erroClassificacao(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "erroClassificacao";
+	}
+
+	@GetMapping("/classificacaoPaciente")
+	public String classificacaoPaciente(Model model) {
+		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+		return "classificacaoPaciente";
 	}
 }
