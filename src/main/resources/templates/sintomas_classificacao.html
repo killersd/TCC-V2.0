@@ -28,7 +28,7 @@
 		<p>
 	</div>
 	<div align="center" class="container">
-		<form th:action="@{/SintomasClassificacao}" method="post">
+		<form th:action="@{/SintomasClassificacao}" th:object="${sintomasClassificacaoModel}" method="post">
 			<button type="submit"
 				class="waves-effect waves-light btn">
 				<i class="material-icons left">local_hospital</i>Classificar

@@ -16,43 +16,59 @@ public class ControleGeralController {
 	public static HashMap<String, Integer> sintomas_e_prioridades = new HashMap<>();
 	public static SintomasClassificacaoModel scm = new SintomasClassificacaoModel();;
 
-	final String[] sintomasVetor = {
-			"Apresentacao_de_partes_fetais","Baba-se","Choque","Convulsionando","Crianca_nao_reativa",
-			"Estridor","Hemorragia_hexanguinante","Hiperglicemia","Hipoglicemia","Lesao_ocular_quimica_aguda",
-			"Nao_reativa","Obstrucao_das_vias_aereas","Prolapso_de_cordao_umbilical","Respiracao_inadequada",
-			
-			"Adulto_muito_quente", "Inicio_abrupto", "Alteracao_da_consciencia_nao_totalmente_atribuida_ao_alcool","Alteracao_subita_da_consciencia","Alto_risco_de_agredir_os_outros","Alto_risco_de_autoagressao","Alto_risco_de_nova_agressao",
-			"Comprometimento_vascular_distal","Crianca_quente","Deficit_neurologico_agudo","Dispineia_aguda","Dor_abdominal",
-			"Dor_epigastrica","Dor_intensa","Dor_que_irradia_para_o_dorso","Dor_ou_coceira_intensas","Dor_precordial_ou_cardiaca",
-			"Edema_de_lingua","Edema_facial","Envenenamento_de_alta_mortalidade","Enfisema_subcultaneo","Erupcao_cultanea_fixa","Erupcao_fixa","Esforco_respiratorio_aumentado",
-			"Evacuacao_de_sangue_vivo_ou_escurecido","Exaustao","Evisceracao","Frases_entrecortadas","Gangrena_de_escroto","Hemoptise",
-			"Hemorragia_maior_incontrolavel","Hiperglicemia_com_cetose","Hipotermia","Hipotonia","Historia_alergica_importante",
-			"Historia_de_alergia_importante","Historia_de_hemorragia_digestiva_importante","Historia_de_overdose_ou_envenenamento","Historia_inadequada","Historia_respiratoria_significativa","Historia_de_convulsao",
-			"Idade_menor_que_25_anos","Inicio_agudo_apos_trauma","Lesao_por_inalacao","Mecanismo_de_trauma_significativo","Mortalidade_alta","Nao_reage_aos_pais",
-			"Perda_total_da_visao_aguda","PFE_muito_baixo","Prostracao","Prostracao_e_hipotonia","Pulso_anormal",
-			"Purpura","Resposta_a_voz_ou_a_dor_apenas","Risco_de_contaminacao_persistente","Risco_especial_de_infeccao","Sangramento_vaginal_mais_de_20_semanas_de_gravidez","Sangramento_vaginal_intenso",
-			"Sat_O2_muito_baixa","Priaprismo","Pele_critica","Sinais_de_dor_intensa","Sinais_de_meningismo","Trabalho_de_parto","Trauma_ocular_penetrante","Vomito_de_sangue",
-			
-			"Adulto_quente","Agitacao_psicomotora","Alteracao_da_consciencia_totalmente_atribuida_ao_alcool","Articulacao_quente", "Celulite_de_escroto",
-			"Choro_prolongado_e_initerrupto","Colicas","Comportamento_conturbador","Couro_cabeludo_temporal_dolorido","Deficit_neurologico_novo",
-			"Disturbio_de_coagulacao","Dor_abdominal","Dor_ao_movimento_articular","Dor_irradiada_para_o_ombro","Dor_moderada",
-			"Dor_ou_coceira_moderadas","Dor_pleuritica","Dor_testicular","Erupcao_ou_vesiculas_disseminadas","Fezes_pretas_ou_em_groselha",
-			"Gravidez_possivel","Hemorragia_menor_incontrolavel","Hiperglicemia","Historia_aguda_de_vomito_de_sangue","Historia_cardiaca_importante",
-			"Historia_de_convulsao","Historia_de_hemoptise","Historia_de_inconsciencia","Historia_de_trauma","Historia_de_trauma_cranioencefalico",
-			"Historia_de_viagem_recente","Historia_discordante","Historia_psiquiatrica_importante","Imunosupressao_conhecida","Inalacao_de_fumaca","Incapaz_de_andar",
-			"Incapaz_de_se_alimentar","Inconsolavel_pelos_pais","Inicio_subito","Massa_abdominal_visivel","Mortalidade_moderada",
-			"Nao_entretivel","Nao_se_alimenta","Palpitacao_atual","PFE_baixo","Pressao_arterial_elevada","Queimadura_eletrica","Queimadura_quimica","Reducao_recente_da_acuidade_visual",
-			"Risco_moderado_de_agredir_os_outros","Risco_moderado_de_autoagressao","Risco_moderado_de_nova_autoagressao","Sangramento_vaginal","Sat_O2_baixa",
-			"Sem_melhora_com_sua_medicacao_habitual","Comorbidade_importante","Sinais_de_desidracao","Sinais_de_dor_moderada","Trauma_direto_no_dorso", "Trauma_direto_no_pescoco","Vomitos_persistentes","Sem_urinar",
-			"Avulcao_dentaria_aguda","Deformidade_grosseira","Fratura_exposta","Hematuria_franca","Retencao_urinaria","Trauma_vaginal",
-			
-			"Cefaleia","Chieira","Comportamento_atipico","Corrimento","Deformidade",
-			"Dor_leve_recente","Dor_leve","Dor_ou_coceira_leve_recente","Edema","Evento_recente","Eventos_recentes",
-			"Febril","Hematoma_de_couro_cabeludo","Inchaco","Infeccao_local","Inflamacao_local","Olho_vermelho",
-			"Sinais_de_dor_leve","Sinais_de_dor_leve_recente","Tosse_produtiva","Trauma_de_escroto","Trauma_recente",
-			"Trauma_toraxico","Vomitos","Diplopia","Disuria","Edema_facial","Hematoma_de_orelha","Inchaco_na_face",
-			"Olhos_vermelhos","Perda_recente_da_audicao","Sensacao_de_corpo_estranho","Sensibilidade_na_face_alterada","Vertigem"
-			
+	final String[] sintomasVetor = { "Apresentacao_de_partes_fetais", "Baba-se", "Choque", "Convulsionando",
+			"Crianca_nao_reativa", "Estridor", "Hemorragia_hexanguinante", "Hiperglicemia", "Hipoglicemia",
+			"Lesao_ocular_quimica_aguda", "Nao_reativa", "Obstrucao_das_vias_aereas", "Prolapso_de_cordao_umbilical",
+			"Respiracao_inadequada",
+
+			"Adulto_muito_quente", "Inicio_abrupto", "Alteracao_da_consciencia_nao_totalmente_atribuida_ao_alcool",
+			"Alteracao_subita_da_consciencia", "Alto_risco_de_agredir_os_outros", "Alto_risco_de_autoagressao",
+			"Alto_risco_de_nova_agressao", "Comprometimento_vascular_distal", "Crianca_quente",
+			"Deficit_neurologico_agudo", "Dispineia_aguda", "Dor_abdominal", "Dor_epigastrica", "Dor_intensa",
+			"Dor_que_irradia_para_o_dorso", "Dor_ou_coceira_intensas", "Dor_precordial_ou_cardiaca", "Edema_de_lingua",
+			"Edema_facial", "Envenenamento_de_alta_mortalidade", "Enfisema_subcultaneo", "Erupcao_cultanea_fixa",
+			"Erupcao_fixa", "Esforco_respiratorio_aumentado", "Evacuacao_de_sangue_vivo_ou_escurecido", "Exaustao",
+			"Evisceracao", "Frases_entrecortadas", "Gangrena_de_escroto", "Hemoptise", "Hemorragia_maior_incontrolavel",
+			"Hiperglicemia_com_cetose", "Hipotermia", "Hipotonia", "Historia_alergica_importante",
+			"Historia_de_alergia_importante", "Historia_de_hemorragia_digestiva_importante",
+			"Historia_de_overdose_ou_envenenamento", "Historia_inadequada", "Historia_respiratoria_significativa",
+			"Historia_de_convulsao", "Idade_menor_que_25_anos", "Inicio_agudo_apos_trauma", "Lesao_por_inalacao",
+			"Mecanismo_de_trauma_significativo", "Mortalidade_alta", "Nao_reage_aos_pais", "Perda_total_da_visao_aguda",
+			"PFE_muito_baixo", "Prostracao", "Prostracao_e_hipotonia", "Pulso_anormal", "Purpura",
+			"Resposta_a_voz_ou_a_dor_apenas", "Risco_de_contaminacao_persistente", "Risco_especial_de_infeccao",
+			"Sangramento_vaginal_mais_de_20_semanas_de_gravidez", "Sangramento_vaginal_intenso", "Sat_O2_muito_baixa",
+			"Priaprismo", "Pele_critica", "Sinais_de_dor_intensa", "Sinais_de_meningismo", "Trabalho_de_parto",
+			"Trauma_ocular_penetrante", "Vomito_de_sangue",
+
+			"Adulto_quente", "Agitacao_psicomotora", "Alteracao_da_consciencia_totalmente_atribuida_ao_alcool",
+			"Articulacao_quente", "Celulite_de_escroto", "Choro_prolongado_e_initerrupto", "Colicas",
+			"Comportamento_conturbador", "Couro_cabeludo_temporal_dolorido", "Deficit_neurologico_novo",
+			"Disturbio_de_coagulacao", "Dor_abdominal", "Dor_ao_movimento_articular", "Dor_irradiada_para_o_ombro",
+			"Dor_moderada", "Dor_ou_coceira_moderadas", "Dor_pleuritica", "Dor_testicular",
+			"Erupcao_ou_vesiculas_disseminadas", "Fezes_pretas_ou_em_groselha", "Gravidez_possivel",
+			"Hemorragia_menor_incontrolavel", "Hiperglicemia", "Historia_aguda_de_vomito_de_sangue",
+			"Historia_cardiaca_importante", "Historia_de_convulsao", "Historia_de_hemoptise",
+			"Historia_de_inconsciencia", "Historia_de_trauma", "Historia_de_trauma_cranioencefalico",
+			"Historia_de_viagem_recente", "Historia_discordante", "Historia_psiquiatrica_importante",
+			"Imunosupressao_conhecida", "Inalacao_de_fumaca", "Incapaz_de_andar", "Incapaz_de_se_alimentar",
+			"Inconsolavel_pelos_pais", "Inicio_subito", "Massa_abdominal_visivel", "Mortalidade_moderada",
+			"Nao_entretivel", "Nao_se_alimenta", "Palpitacao_atual", "PFE_baixo", "Pressao_arterial_elevada",
+			"Queimadura_eletrica", "Queimadura_quimica", "Reducao_recente_da_acuidade_visual",
+			"Risco_moderado_de_agredir_os_outros", "Risco_moderado_de_autoagressao",
+			"Risco_moderado_de_nova_autoagressao", "Sangramento_vaginal", "Sat_O2_baixa",
+			"Sem_melhora_com_sua_medicacao_habitual", "Comorbidade_importante", "Sinais_de_desidracao",
+			"Sinais_de_dor_moderada", "Trauma_direto_no_dorso", "Trauma_direto_no_pescoco", "Vomitos_persistentes",
+			"Sem_urinar", "Avulcao_dentaria_aguda", "Deformidade_grosseira", "Fratura_exposta", "Hematuria_franca",
+			"Retencao_urinaria", "Trauma_vaginal",
+
+			"Cefaleia", "Chieira", "Comportamento_atipico", "Corrimento", "Deformidade", "Dor_leve_recente", "Dor_leve",
+			"Dor_ou_coceira_leve_recente", "Edema", "Evento_recente", "Eventos_recentes", "Febril",
+			"Hematoma_de_couro_cabeludo", "Inchaco", "Infeccao_local", "Inflamacao_local", "Olho_vermelho",
+			"Sinais_de_dor_leve", "Sinais_de_dor_leve_recente", "Tosse_produtiva", "Trauma_de_escroto",
+			"Trauma_recente", "Trauma_toraxico", "Vomitos", "Diplopia", "Disuria", "Edema_facial", "Hematoma_de_orelha",
+			"Inchaco_na_face", "Olhos_vermelhos", "Perda_recente_da_audicao", "Sensacao_de_corpo_estranho",
+			"Sensibilidade_na_face_alterada", "Vertigem"
+
 	};
 
 	public void preencheSintomas() {
@@ -64,7 +80,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Crianca_nao_reativa", 1);
 		sintomas_e_prioridades.put("Estridor", 1);
 		sintomas_e_prioridades.put("Hemorragia_hexanguinante", 1);
-		sintomas_e_prioridades.put("Hiperglicemia", 1);//verificar esse
+		sintomas_e_prioridades.put("Hiperglicemia", 1);// verificar esse
 		sintomas_e_prioridades.put("Hipoglicemia", 1);
 		sintomas_e_prioridades.put("Lesao_ocular_quimica_aguda", 1);
 		sintomas_e_prioridades.put("Nao_reativa", 1);
@@ -82,7 +98,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Crianca_quente", 2);
 		sintomas_e_prioridades.put("Deficit_neurologico_agudo", 2);
 		sintomas_e_prioridades.put("Dispineia_aguda", 2);
-		sintomas_e_prioridades.put("Dor_abdominal", 2);//verificar esse
+		sintomas_e_prioridades.put("Dor_abdominal", 2);// verificar esse
 		sintomas_e_prioridades.put("Dor_epigastrica", 2);
 		sintomas_e_prioridades.put("Dor_intensa", 2);
 		sintomas_e_prioridades.put("Dor_que_irradia_para_o_dorso", 2);
@@ -111,14 +127,14 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Historia_de_overdose_ou_envenenamento", 2);
 		sintomas_e_prioridades.put("Historia_inadequada", 2);
 		sintomas_e_prioridades.put("Historia_respiratoria_significativa", 2);
-		sintomas_e_prioridades.put("Historia_de_convulsao", 2);//verificar esse
+		sintomas_e_prioridades.put("Historia_de_convulsao", 2);// verificar esse
 		sintomas_e_prioridades.put("Idade_menor_que_25_anos", 2);
 		sintomas_e_prioridades.put("Inicio_abrupto", 2);
 		sintomas_e_prioridades.put("Inicio_agudo_apos_trauma", 2);
 		sintomas_e_prioridades.put("Lesao_por_inalacao", 2);
 		sintomas_e_prioridades.put("Mecanismo_de_trauma_significativo", 2);
 		sintomas_e_prioridades.put("Mortalidade_alta", 2);
-		sintomas_e_prioridades.put("Nao_reage_aos_pais", 2);	
+		sintomas_e_prioridades.put("Nao_reage_aos_pais", 2);
 		sintomas_e_prioridades.put("Pele_critica", 2);
 		sintomas_e_prioridades.put("Perda_total_da_visao_aguda", 2);
 		sintomas_e_prioridades.put("PFE_muito_baixo", 2);
@@ -138,7 +154,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Trabalho_de_parto", 2);
 		sintomas_e_prioridades.put("Trauma_ocular_penetrante", 2);
 		sintomas_e_prioridades.put("Vomito_de_sangue", 2);
-		// Amarelo		
+		// Amarelo
 		sintomas_e_prioridades.put("Adulto_quente", 3);
 		sintomas_e_prioridades.put("Agitacao_psicomotora", 3);
 		sintomas_e_prioridades.put("Alteracao_da_consciencia_totalmente_atribuida_ao_alcool", 3);
@@ -153,7 +169,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Deficit_neurologico_novo", 3);
 		sintomas_e_prioridades.put("Deformidade_grosseira", 3);
 		sintomas_e_prioridades.put("Disturbio_de_coagulacao", 3);
-		sintomas_e_prioridades.put("Dor_abdominal", 3);//verificar esse
+		sintomas_e_prioridades.put("Dor_abdominal", 3);// verificar esse
 		sintomas_e_prioridades.put("Dor_ao_movimento_articular", 3);
 		sintomas_e_prioridades.put("Dor_irradiada_para_o_ombro", 3);
 		sintomas_e_prioridades.put("Dor_moderada", 3);
@@ -167,10 +183,10 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Gravidez_possivel", 3);
 		sintomas_e_prioridades.put("Hematuria_franca", 3);
 		sintomas_e_prioridades.put("Hemorragia_menor_incontrolavel", 3);
-		sintomas_e_prioridades.put("Hiperglicemia", 3);//verificar esse
+		sintomas_e_prioridades.put("Hiperglicemia", 3);// verificar esse
 		sintomas_e_prioridades.put("Historia_aguda_de_vomito_de_sangue", 3);
 		sintomas_e_prioridades.put("Historia_cardiaca_importante", 3);
-		sintomas_e_prioridades.put("Historia_de_convulsao", 3);//verificar esse
+		sintomas_e_prioridades.put("Historia_de_convulsao", 3);// verificar esse
 		sintomas_e_prioridades.put("Historia_de_hemoptise", 3);
 		sintomas_e_prioridades.put("Historia_de_inconsciencia", 3);
 		sintomas_e_prioridades.put("Historia_de_trauma", 3);
@@ -198,7 +214,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Risco_moderado_de_agredir_os_outros", 3);
 		sintomas_e_prioridades.put("Risco_moderado_de_autoagressao", 3);
 		sintomas_e_prioridades.put("Risco_moderado_de_nova_autoagressao", 3);
-		sintomas_e_prioridades.put("Sangramento_vaginal", 3);//verificar esse
+		sintomas_e_prioridades.put("Sangramento_vaginal", 3);// verificar esse
 		sintomas_e_prioridades.put("Sat_O2_baixa", 3);
 		sintomas_e_prioridades.put("Sem_melhora_com_sua_medicacao_habitual", 3);
 		sintomas_e_prioridades.put("Sinais_de_desidracao", 3);
@@ -207,7 +223,7 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Trauma_direto_no_pescoco", 3);
 		sintomas_e_prioridades.put("Trauma_vaginal", 3);
 		sintomas_e_prioridades.put("Vomitos_persistentes", 3);
-		sintomas_e_prioridades.put("Sem_urinar", 3);//verificar esse		
+		sintomas_e_prioridades.put("Sem_urinar", 3);
 		// Verde
 		sintomas_e_prioridades.put("Cefaleia", 4);
 		sintomas_e_prioridades.put("Chieira", 4);
@@ -230,18 +246,18 @@ public class ControleGeralController {
 		sintomas_e_prioridades.put("Inchaco_na_face", 4);
 		sintomas_e_prioridades.put("Infeccao_local", 4);
 		sintomas_e_prioridades.put("Inflamacao_local", 4);
-		sintomas_e_prioridades.put("Olho_vermelho", 4);	
+		sintomas_e_prioridades.put("Olho_vermelho", 4);
 		sintomas_e_prioridades.put("Olhos_vermelhos", 4);
 		sintomas_e_prioridades.put("Perda_recente_da_audicao", 4);
 		sintomas_e_prioridades.put("Sensacao_de_corpo_estranho", 4);
-		sintomas_e_prioridades.put("Sensibilidade_na_face_alterada", 4);	
+		sintomas_e_prioridades.put("Sensibilidade_na_face_alterada", 4);
 		sintomas_e_prioridades.put("Sinais_de_dor_leve", 4);
 		sintomas_e_prioridades.put("Sinais_de_dor_leve_recente", 4);
 		sintomas_e_prioridades.put("Tosse_produtiva", 4);
 		sintomas_e_prioridades.put("Trauma_de_escroto", 4);
 		sintomas_e_prioridades.put("Trauma_recente", 4);
 		sintomas_e_prioridades.put("Trauma_toraxico", 4);
-		sintomas_e_prioridades.put("Vertigem", 4);	
+		sintomas_e_prioridades.put("Vertigem", 4);
 		sintomas_e_prioridades.put("Vomitos", 4);
 	}
 
@@ -267,6 +283,11 @@ public class ControleGeralController {
 		return scm.getSintomas();
 	}
 
+	public String resetaSintomas() {
+		scm.setSintomas(scm.getSintomas().toUpperCase());
+		return scm.getSintomas();
+	}
+	
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
 	// crianças
 	@GetMapping("/Criancas/bebeChorando")
@@ -281,10 +302,9 @@ public class ControleGeralController {
 
 			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
 		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
-
+		
 		preencheSintomas();
-		definirPrioridade();
-
+		definirPrioridade();		
 		return "redirect:/sintomas_classificacao";
 
 	}
@@ -450,8 +470,9 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
+
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
-	// problemas em partes do corpo	
+	// problemas em partes do corpo
 	@GetMapping("/ProblemasEmPartesDoCorpo/problemasDentarios")
 	public String problemasDentarios(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -471,8 +492,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
-	
+
 	@GetMapping("/ProblemasEmPartesDoCorpo/problemasEmExtremidades")
 	public String problemasEmExtremidades(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -492,7 +512,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/ProblemasEmPartesDoCorpo/problemasEmFace")
 	public String problemasEmFace(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -512,8 +532,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
-	
+
 	@GetMapping("/ProblemasEmPartesDoCorpo/problemasEmOlhos")
 	public String problemasEmOlhos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -533,7 +552,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/ProblemasEmPartesDoCorpo/problemasEmOuvidos")
 	public String problemasEmOuvidos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -553,7 +572,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/ProblemasEmPartesDoCorpo/problemasUrinarios")
 	public String problemasUrinarios(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -573,7 +592,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/ProblemasEmPartesDoCorpo/sangramentoVaginal")
 	public String sangramentoVaginal(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -593,6 +612,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
+
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
 	// dores
 	@GetMapping("/Dores/dorCervical")
@@ -614,7 +634,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/Dores/dorDeGarganta")
 	public String dorDeGarganta(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -634,7 +654,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/Dores/dorLombar")
 	public String dorLombar(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -654,7 +674,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/Dores/dorTesticular")
 	public String dorTesticular(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -674,8 +694,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
-	
+
 	@GetMapping("/Dores/dorToraxica")
 	public String dorToraxica(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -695,7 +714,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/Dores/cefaleia")
 	public String cefaleia(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -715,10 +734,10 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
 	// Sintomas Comuns
-	
+
 	@GetMapping("/SintomasComuns/desmaioNoAdulto")
 	public String desmaioNoAdulto(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -738,7 +757,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/embriaguezAparente")
 	public String embriaguezAparente(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -758,7 +777,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/feridas")
 	public String feridas(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -778,7 +797,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/infeccoesLocaisAbcessos")
 	public String infeccoesLocaisAbcessos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -798,8 +817,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
-	
+
 	@GetMapping("/SintomasComuns/malEstarEmAdultos")
 	public String malEstarEmAdultos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -819,7 +837,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/diarreiaVomitos")
 	public String diarreiaVomitos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -839,7 +857,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/agressao")
 	public String agressao(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -859,8 +877,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
-	
+
 	@GetMapping("/SintomasComuns/palpitacoes")
 	public String palpitacoes(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -880,7 +897,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/diabetes")
 	public String diabetes(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -893,14 +910,13 @@ public class ControleGeralController {
 
 			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
 		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
-
 		preencheSintomas();
 		definirPrioridade();
 
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/erupcaoCultanea")
 	public String erupcaoCultanea(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -920,7 +936,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/dorAbdominalEmAdultos")
 	public String dorAbdominalEmAdultos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -940,7 +956,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/gravidez")
 	public String gravidez(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -960,7 +976,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/quedas")
 	public String quedas(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -980,7 +996,7 @@ public class ControleGeralController {
 		return "redirect:/sintomas_classificacao";
 
 	}
-	
+
 	@GetMapping("/SintomasComuns/queimaduras")
 	public String queimaduras(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1002,7 +1018,7 @@ public class ControleGeralController {
 	}
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
 	// Outros
-	
+
 	@GetMapping("/Outros/alergia")
 	public String alergia(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1021,7 +1037,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/alteracaoDoComportamento")
 	public String alteracaoDoComportamento(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1040,7 +1056,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/asma")
 	public String asma(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1059,7 +1075,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/autoagressao")
 	public String autoagressao(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1078,7 +1094,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/convulsoes")
 	public String convulsoes(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1097,7 +1113,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/dispineiaEmAdultos")
 	public String dispineiaEmAdultos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1116,7 +1132,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/exposicaoAgentesQuimicos")
 	public String exposicaoAgentesQuimicos(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1135,7 +1151,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/hemorragiaDigestiva")
 	public String hemorragiaDigestiva(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1154,7 +1170,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/mordeduraPicadas")
 	public String mordeduraPicadas(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1173,7 +1189,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/overdoseEnvenenamento")
 	public String overdoseEnvenenamento(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1192,7 +1208,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/paisPreocupados")
 	public String paisPreocupados(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1211,7 +1227,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/doencaMental")
 	public String doencaMental(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1230,7 +1246,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/corpoEstranho")
 	public String corpoEstranho(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1249,7 +1265,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/Outros/dst")
 	public String dst(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
@@ -1268,7 +1284,7 @@ public class ControleGeralController {
 
 		return "redirect:/sintomas_classificacao";
 	}
-	
+
 	@GetMapping("/erroClassificacao")
 	public String erroClassificacao(Model model) {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();

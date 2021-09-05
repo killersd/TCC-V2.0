@@ -46,23 +46,20 @@ public class HomeController {
 		return "classificacao_final";
 	}
 
-	@RequestMapping("/grupo_registrado")
-	public String cff() {
-		return "grupo_registrado";
-	}
+//	@RequestMapping("/grupo_registrado")
+//	public String cff() {
+//		return "grupo_registrado";
+//	}
 
-	@RequestMapping("/modal")
-	public String modal() {
-		return "modal";
-	}
-	
-	@RequestMapping("/testeCheckbox")
-	public String testeCheckbox() {
-		return "testeCheckbox";
-	}
+//	@RequestMapping("/modal")
+//	public String modal() {
+//		return "modal";
+//	}
 
 	@RequestMapping("/sintomas_classificacao")
 	public String sintomasClassificacao() {
 		return "sintomas_classificacao";
 	}
+	
+	
 }

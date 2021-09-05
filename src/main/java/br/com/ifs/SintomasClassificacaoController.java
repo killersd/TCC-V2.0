@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import io.swagger.annotations.ApiOperation;
-
 @Controller
 public class SintomasClassificacaoController {
 	@Autowired
@@ -33,7 +31,7 @@ public class SintomasClassificacaoController {
 
 			session.insert(sintomasClassificacao);
 			session.fireAllRules();
-
+			
 			if (!sintomasClassificacao.getClassificacao().equalsIgnoreCase("VERDE")) {
 				sintomasClassificacao.setLocal("HOSPITAL");
 			} else {
@@ -57,33 +55,31 @@ public class SintomasClassificacaoController {
 				break;
 			}
 			System.out.println("Salvando objeto no banco...");
+			
 			objeto.setClassificacao(sintomasClassificacao.getClassificacao());
 			objeto.setTempoAtendimentoMinutos(sintomasClassificacao.getTempoAtendimentoMinutos());
 			objeto.setLocal(sintomasClassificacao.getLocal());
 			objeto.setGrupo(sintomasClassificacao.getGrupo());
 			objeto.setSintomas(sintomasClassificacao.getSintomas());
 			objeto.setTempoAtendimentoImediato(sintomasClassificacao.getTempoAtendimentoImediato());
+			
 			System.out.println("CLassificação: " + objeto.getClassificacao());
 			System.out.println("Tempo de atendimento: " + objeto.getTempoAtendimentoMinutos());
 			System.out.println("Local de atendimento: " + objeto.getLocal());
+			
 			sintomasClassificacaoRepository.save(sintomasClassificacao);
+			
 			System.out.println("O objeto foi salvo com sucesso!");
-			//return "redirect:/classificacao_final";
+			
+			sintomasClassificacao.setSintomas(bcc.resetaSintomas());
+			
 			return "redirect:/classificacaoPaciente";
+			
 		} catch (Exception e) {
 			System.out.println("Houve um erro na classificação");
 			return "redirect:/erroClassificacao";
 		}
 	}
-
-	/*@GetMapping("/SintomasClassificacao")
-	@ApiOperation(value = "Retorna todas as classificações existentes no banco de dados")
-	public ModelAndView mostrarClassificacao(Model model) {
-		ModelAndView mv = new ModelAndView("classificacao_final");
-		Iterable<SintomasClassificacaoModel> sintomasClassificacaoModel = sintomasClassificacaoRepository.findAll();
-		mv.addObject("sintomasClassificacaoModel", sintomasClassificacaoModel);
-		return mv;
-	}*/
 
 	@GetMapping("/SintomasClassificacao")
 	public String showForm(Model model) {
@@ -92,9 +88,7 @@ public class SintomasClassificacaoController {
 		return "classificacaoPaciente";
 	} 
 	
-	
 	@DeleteMapping("/SintomasClassificacao")
-	@ApiOperation(value = "Este método deleta uma classificação existente no banco")
 	public void deletaRegistro(@RequestBody SintomasClassificacaoModel sintomasClassificacaoModel) {
 		sintomasClassificacaoRepository.delete(sintomasClassificacaoModel);
 	}
