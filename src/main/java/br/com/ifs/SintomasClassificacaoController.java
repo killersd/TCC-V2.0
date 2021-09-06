@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class SintomasClassificacaoController {
@@ -75,7 +77,7 @@ public class SintomasClassificacaoController {
 
 			sintomasClassificacao.setSintomas(bcc.resetaSintomas());
 
-			return "redirect:/classificacao_final";
+			return "redirect:/classificacaoPaciente";
 
 		} catch (Exception e) {
 			System.out.println("Houve um erro na classificação");
@@ -94,5 +96,22 @@ public class SintomasClassificacaoController {
 	public void deletaRegistro(@RequestBody SintomasClassificacaoModel sintomasClassificacaoModel) {
 		sintomasClassificacaoRepository.delete(sintomasClassificacaoModel);
 	}
+	
+	@RequestMapping(value="classificacaoPaciente", method = {RequestMethod.GET, RequestMethod.POST})
+	public String classificacaoPaciente(SintomasClassificacaoModel sintomasClassificacaoModel, Model model) {
+		SintomasClassificacaoModel sintomasClassificacao = new SintomasClassificacaoModel();
+		
+		sintomasClassificacao.setClassificacao(objeto.getClassificacao());
+		sintomasClassificacao.setLocal(objeto.getLocal());
+		sintomasClassificacao.setGrupo(objeto.getGrupo());
+		sintomasClassificacao.setTempoAtendimentoImediato(objeto.getTempoAtendimentoImediato());
+		sintomasClassificacao.setFluxograma(objeto.getFluxograma());
+		sintomasClassificacao.setSintomas(objeto.getSintomas());
+		sintomasClassificacao.setTempoAtendimentoMinutos(objeto.getTempoAtendimentoMinutos());
+		
+		model.addAttribute("sintomasClassificacao", sintomasClassificacao);
+		return "classificacaoPaciente";
+	}
+
 
 }

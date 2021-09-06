@@ -86,7 +86,7 @@ public class SintomasClassificacaoModel implements Serializable {
 
 	@Override
 	public String toString() {
-		return "SintomasClassificacaoModel [id=" + id + ", tempoAtendimentoMinutos=" + tempoAtendimentoMinutos
+		return "SintomasClassificacaoModel [tempoAtendimentoMinutos=" + tempoAtendimentoMinutos
 				+ ", sintomas=" + sintomas + ", classificacao=" + classificacao + ", local=" + local + ", grupo="
 				+ grupo + ", tempoAtendimentoImediato=" + tempoAtendimentoImediato + ", fluxograma=" + fluxograma + "]";
 	}

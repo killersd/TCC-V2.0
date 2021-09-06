@@ -1291,10 +1291,10 @@ public class ControleGeralController {
 		return "erroClassificacao";
 	}
 
-	@GetMapping("/classificacaoPaciente")
-	public String classificacaoPaciente(Model model) {
-		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
-		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
-		return "classificacaoPaciente";
-	}
+//	@GetMapping("/classificacaoPaciente")
+//	public String classificacaoPaciente(Model model) {
+//		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
+//		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
+//		return "classificacaoPaciente";
+//	}
 }
