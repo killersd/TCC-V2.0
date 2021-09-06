@@ -75,7 +75,7 @@ public class SintomasClassificacaoController {
 
 			sintomasClassificacao.setSintomas(bcc.resetaSintomas());
 
-			return "redirect:/classificacaoPaciente";
+			return "redirect:/classificacao_final";
 
 		} catch (Exception e) {
 			System.out.println("Houve um erro na classificação");
