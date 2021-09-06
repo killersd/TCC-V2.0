@@ -16,30 +16,26 @@ label {
 </head>
 <body>
 	<div class="container" align="center">
-<h3>Fluxograma 29 - Feridas</h3>
+		<h3>Fluxograma 29 - Feridas</h3>
 		<p>
 		<form action="#" th:action="@{/SintomasComuns/feridas}"
 			th:object="${sintomasClassificacaoModel}" method="post">
-			
+
 			<input type="checkbox" th:field="*{sintomas}" id="8"
 				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
-				das vias aéreas</label> 
-				
-				<input type="checkbox" th:field="*{sintomas}" id="9"
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
 				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
 
-			<input type="checkbox" th:field="*{sintomas}" id="477" value="Hemorragia_hexanguinante">
-			<label for="477">Hemorragia_hexanguinante</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Hemorragia_hexanguinante"> <label for="477">Hemorragia_hexanguinante</label>
 
 
 			<div class="col-md-12">
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="10"
-						value="Choque"> <label for="10">Choque</label>
-
-
-					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Choque"> <label for="10">Choque</label> <input
+						type="checkbox" th:field="*{sintomas}" id="11"
 						value="Hemorragia_maior_incontrolavel"> <label for="11">Hemorragia_maior_incontrolavel</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="12"
@@ -54,9 +50,8 @@ label {
 						value="Alteracao_subita_da_consciencia"> <label for="12">Alteracao_subita_da_consciencia</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="13"
-						value="Dor_intensa"> <label for="13">Dor_intensa</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Dor_intensa"> <label for="13">Dor_intensa</label> <input
+						type="checkbox" th:field="*{sintomas}" id="16"
 						value="Historia_discordante"> <label for="16">Historia_discordante</label>
 				</div>
 			</div>
@@ -99,8 +94,8 @@ label {
 			<div>
 				<button type="submit">Ir para classificação</button>
 				<div>
-<a href="/sintomas_comuns" style="width: 300px">Voltar para a tela de
-						fluxograma para Sintomas Comuns</a>
+					<a href="/sintomas_comuns_02" style="width: 300px">Voltar para
+						a tela de fluxograma para Sintomas Comuns</a>
 				</div>
 
 			</div>

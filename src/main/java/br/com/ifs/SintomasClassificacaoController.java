@@ -19,15 +19,17 @@ public class SintomasClassificacaoController {
 	SintomasClassificacaoModel objeto = new SintomasClassificacaoModel();
 
 	@PostMapping("/SintomasClassificacao")
-	public String classificarPaciente(@ModelAttribute ("sintomasClassificacaoModel") @RequestBody SintomasClassificacaoModel sintomasClassificacao) {
-
+	public String classificarPaciente(
+			@ModelAttribute("sintomasClassificacaoModel") @RequestBody SintomasClassificacaoModel sintomasClassificacao) {
 
 		try {
 			GrupoController gc = new GrupoController();
 			ControleGeralController bcc = new ControleGeralController();
+			FluxogramasController fc = new FluxogramasController();
 			
 			sintomasClassificacao.setGrupo(gc.grupoString());
 			sintomasClassificacao.setSintomas(bcc.sintomaString());
+			sintomasClassificacao.setFluxograma(fc.fluxogramaString());
 
 			session.insert(sintomasClassificacao);
 			session.fireAllRules();
@@ -55,26 +57,26 @@ public class SintomasClassificacaoController {
 				break;
 			}
 			System.out.println("Salvando objeto no banco...");
-			
+
 			objeto.setClassificacao(sintomasClassificacao.getClassificacao());
 			objeto.setTempoAtendimentoMinutos(sintomasClassificacao.getTempoAtendimentoMinutos());
 			objeto.setLocal(sintomasClassificacao.getLocal());
 			objeto.setGrupo(sintomasClassificacao.getGrupo());
 			objeto.setSintomas(sintomasClassificacao.getSintomas());
 			objeto.setTempoAtendimentoImediato(sintomasClassificacao.getTempoAtendimentoImediato());
-			
-			System.out.println("CLassificação: " + objeto.getClassificacao());
+
+			System.out.println("\nCLassificação: " + objeto.getClassificacao());
 			System.out.println("Tempo de atendimento: " + objeto.getTempoAtendimentoMinutos());
 			System.out.println("Local de atendimento: " + objeto.getLocal());
-			
+
 			sintomasClassificacaoRepository.save(sintomasClassificacao);
-			
-			System.out.println("O objeto foi salvo com sucesso!");
-			
+
+			System.out.println("\nO objeto foi salvo com sucesso!");
+
 			sintomasClassificacao.setSintomas(bcc.resetaSintomas());
-			
+
 			return "redirect:/classificacaoPaciente";
-			
+
 		} catch (Exception e) {
 			System.out.println("Houve um erro na classificação");
 			return "redirect:/erroClassificacao";
@@ -86,12 +88,11 @@ public class SintomasClassificacaoController {
 		SintomasClassificacaoModel sintomasClassificacaoModel = new SintomasClassificacaoModel();
 		model.addAttribute("sintomasClassificacaoModel", sintomasClassificacaoModel);
 		return "classificacaoPaciente";
-	} 
-	
+	}
+
 	@DeleteMapping("/SintomasClassificacao")
 	public void deletaRegistro(@RequestBody SintomasClassificacaoModel sintomasClassificacaoModel) {
 		sintomasClassificacaoRepository.delete(sintomasClassificacaoModel);
 	}
 
 }
-

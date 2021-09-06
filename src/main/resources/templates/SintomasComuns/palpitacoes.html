@@ -16,34 +16,31 @@ label {
 </head>
 <body>
 	<div class="container" align="center">
-<h3>Fluxograma 38 - Palpitações</h3>
+		<h3>Fluxograma 38 - Palpitações</h3>
 		<p>
 		<form action="#" th:action="@{/SintomasComuns/palpitacoes}"
 			th:object="${sintomasClassificacaoModel}" method="post">
-			
+
 			<input type="checkbox" th:field="*{sintomas}" id="8"
 				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
-				das vias aéreas</label> 
-				
-				<input type="checkbox" th:field="*{sintomas}" id="9"
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
 				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
 
-			<input type="checkbox" th:field="*{sintomas}" id="477" value="Dor_precordial_ou_cardiaca">
-			<label for="477">Dor_precordial_ou_cardiaca</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Dor_precordial_ou_cardiaca"> <label for="477">Dor_precordial_ou_cardiaca</label>
 
 
 			<div class="col-md-12">
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="10"
-						value="Choque"> <label for="10">Choque</label>
-
-
-					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Choque"> <label for="10">Choque</label> <input
+						type="checkbox" th:field="*{sintomas}" id="11"
 						value="Dispineia_aguda"> <label for="11">Dispineia_aguda</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="12"
-						value="Historia_de_overdose_ou_envenenamento"> <label for="12">Historia_de_overdose_ou_envenenamento</label>
+						value="Historia_de_overdose_ou_envenenamento"> <label
+						for="12">Historia_de_overdose_ou_envenenamento</label>
 
 				</div>
 			</div>
@@ -87,15 +84,15 @@ label {
 						value="Evento_recente"> <label for="24as722">Evento_recente</label>
 				</div>
 			</div>
-			
-			
-		
+
+
+
 			<p>
 			<div>
 				<button type="submit">Ir para classificação</button>
 				<div>
-					<a href="/sintomas_comuns" style="width: 300px">Voltar para a tela de
-						fluxograma para Sintomas Comuns</a>
+					<a href="/sintomas_comuns_02" style="width: 300px">Voltar para
+						a tela de fluxograma para Sintomas Comuns</a>
 				</div>
 
 			</div>

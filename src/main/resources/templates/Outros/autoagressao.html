@@ -18,7 +18,7 @@ label {
 
 
 	<div class="container" align="center">
-<h3>Fluxograma 05 - Autoagressão</h3>
+		<h3>Fluxograma 05 - Autoagressão</h3>
 		<p>
 		<form action="#" th:action="@{/Outros/autoagressao}"
 			th:object="${sintomasClassificacaoModel}" method="post">
@@ -26,18 +26,16 @@ label {
 				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
 				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
 				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
-			<input type="checkbox" th:field="*{sintomas}" id="477" value="Hemorragia_hexanguinante">
-			<label for="477">Hemorragia_hexanguinante</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Hemorragia_hexanguinante"> <label for="477">Hemorragia_hexanguinante</label>
 
 
 			<div class="col-md-12">
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="10"
-						value="Choque"> <label for="10">Choque</label>
-
-
-					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Choque"> <label for="10">Choque</label> <input
+						type="checkbox" th:field="*{sintomas}" id="11"
 						value="Dispineia_aguda"> <label for="11">Dispineia_aguda</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="12"
@@ -66,20 +64,19 @@ label {
 				</div>
 			</div>
 
-			
-			
+
+
 			<p>
 			<div>
-				<button type="submit">Ir para classificação
-				</button>
-							<div>
-				<a href="/outros" style="width: 300px">Voltar para a tela de
-					outros fluxogramas</a>
-			</div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros_02" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
 
 			</div>
 		</form>
 	</div>
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

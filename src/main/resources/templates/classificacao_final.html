@@ -42,6 +42,7 @@
 						<th>Espera (minutos)</th>
 						<th>Grupo</th>
 						<th>Sintoma mais grave</th>
+						<th>Fluxograma</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -56,7 +57,7 @@
 							th:text="${SintomasClassificacaoModel.tempoAtendimentoMinutos}"></span></td>
 						<td><span th:text="${SintomasClassificacaoModel.grupo}"></span></td>
 						<td><span th:text="${SintomasClassificacaoModel.sintomas}"></span></td>
-
+						<td><span th:text="${SintomasClassificacaoModel.fluxograma}"></span></td>
 					</tr>
 				</tbody>
 			</table>
@@ -77,6 +78,7 @@
 		$('.minhatabela').DataTable({
 			ordering : false,
 			searching : false,
+			lengthChange: false
 		});
 	</script>
 </body>

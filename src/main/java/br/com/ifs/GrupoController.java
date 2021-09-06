@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import io.swagger.annotations.ApiOperation;
-
 @Controller
 public class GrupoController {
 	public static String grupo;
@@ -30,22 +28,28 @@ public class GrupoController {
 			System.out.println(grupo);
 
 			if (grupo.equals("criancas")) {
-				return "redirect:/criancas";
+				//return "redirect:/criancas";
+				return "redirect:/criancas_02";
 			}
 			if (grupo.equals("traumas")) {
-				return "redirect:/traumas";
+				//return "redirect:/traumas";
+				return "redirect:/traumas_02";
 			}
 			if (grupo.equals("dores")) {
-				return "redirect:/dores";
+				//return "redirect:/dores";
+				return "redirect:/dores_02";
 			}
 			if (grupo.equals("partes_do_corpo")) {
-				return "redirect:/partes_do_corpo";
+				//return "redirect:/partes_do_corpo";
+				return "redirect:/partes_do_corpo_02";
 			}
 			if (grupo.equals("sintomas_comuns")) {
-				return "redirect:/sintomas_comuns";
+				//return "redirect:/sintomas_comuns";
+				return "redirect:/sintomas_comuns_02";
 			}
 			if (grupo.equals("outros")) {
-				return "redirect:/outros";
+				//return "redirect:/outros";
+				return "redirect:/outros_02";
 			}
 		} catch (Exception e) {
 			System.out.println("Grupo não pode ser vazio");
@@ -55,8 +59,6 @@ public class GrupoController {
 		return "";
 	}
 
-	@ApiOperation(value = "Armazena o grupo escolhido pelo usuário, para posteriormente setá-lo no objeto que será usado no "
-			+ "no metodo para classificar o paciente")
 	public String grupoString() {
 		if (grupo.equals("criancas")) {
 			return "criancas";

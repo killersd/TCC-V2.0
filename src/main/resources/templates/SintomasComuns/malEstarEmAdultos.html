@@ -16,16 +16,14 @@ label {
 </head>
 <body>
 	<div class="container" align="center">
-<h3>Fluxograma 33 - Mal Estar em Adultos</h3>
+		<h3>Fluxograma 33 - Mal Estar em Adultos</h3>
 		<p>
 		<form action="#" th:action="@{/SintomasComuns/malEstarEmAdultos}"
 			th:object="${sintomasClassificacaoModel}" method="post">
-			
+
 			<input type="checkbox" th:field="*{sintomas}" id="8"
 				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
-				das vias aéreas</label> 
-				
-				<input type="checkbox" th:field="*{sintomas}" id="9"
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
 				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
 
 			<input type="checkbox" th:field="*{sintomas}" id="477" value="Choque">
@@ -51,9 +49,8 @@ label {
 			<div class="col-md-12">
 				<div class="col-md-6">
 					<input type="checkbox" th:field="*{sintomas}" id="12"
-						value="Hemoptise"> <label for="12">Hemoptise</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Hemoptise"> <label for="12">Hemoptise</label> <input
+						type="checkbox" th:field="*{sintomas}" id="13"
 						value="Pulso_anormal"> <label for="13">Pulso_anormal</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="16"
@@ -78,18 +75,17 @@ label {
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="24711"
-						value="Purpura"> <label for="24711">Purpura</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="24722"
+						value="Purpura"> <label for="24711">Purpura</label> <input
+						type="checkbox" th:field="*{sintomas}" id="24722"
 						value="Adulto_muito_quente"> <label for="24722">Adulto_muito_quente</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="24as722"
 						value="Hipotermia"> <label for="24as722">Hipotermia</label>
 				</div>
 			</div>
-			
-			
-			
+
+
+
 			<div class="col-md-12">
 				<div class="col-md-6">
 
@@ -136,33 +132,32 @@ label {
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="124711"
-						value="Febril"> <label for="124711">Febril</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="224722"
+						value="Febril"> <label for="124711">Febril</label> <input
+						type="checkbox" th:field="*{sintomas}" id="224722"
 						value=Evento_recente> <label for="224722">Evento_recente</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="224as722"
 						value="Dor_leve_recente"> <label for="224as722">Dor_leve_recente</label>
 				</div>
 			</div>
-			
-						<div class="col-md-12">
+
+			<div class="col-md-12">
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="247111"
 						value="Historia_de_hemoptise"> <label for="247111">Historia_de_hemoptise</label>
 
-					
+
 				</div>
 			</div>
-			
-			
+
+
 			<p>
 			<div>
 				<button type="submit">Ir para classificação</button>
 				<div>
-					<a href="/sintomas_comuns" style="width: 300px">Voltar para a tela de
-						fluxograma para Sintomas Comuns</a>
+					<a href="/sintomas_comuns_02" style="width: 300px">Voltar para
+						a tela de fluxograma para Sintomas Comuns</a>
 				</div>
 
 			</div>

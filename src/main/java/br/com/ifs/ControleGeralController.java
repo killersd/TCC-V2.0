@@ -287,7 +287,7 @@ public class ControleGeralController {
 		scm.setSintomas(scm.getSintomas().toUpperCase());
 		return scm.getSintomas();
 	}
-	
+
 	// A partir deste ponto iniciam-se os mapeamentos das URL's para o grupo de
 	// crianças
 	@GetMapping("/Criancas/bebeChorando")
@@ -302,9 +302,9 @@ public class ControleGeralController {
 
 			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
 		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
-		
+
 		preencheSintomas();
-		definirPrioridade();		
+		definirPrioridade();
 		return "redirect:/sintomas_classificacao";
 
 	}
@@ -770,7 +770,6 @@ public class ControleGeralController {
 
 			@ModelAttribute("sintomasmodel") SintomasModel sintomasModel) {
 		ControleGeralController.sintomasSelecionados = sintomasModel.getSintomas();
-
 		preencheSintomas();
 		definirPrioridade();
 

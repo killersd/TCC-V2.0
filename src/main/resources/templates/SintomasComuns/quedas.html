@@ -106,22 +106,21 @@ label {
 			</div>
 			<div class="col-md-12">
 				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" value="Deformidade">
+					<label>Deformidade</label> <input type="checkbox"
+						th:field="*{sintomas}" value=Inchaco> <label>Inchaco</label>
 					<input type="checkbox" th:field="*{sintomas}"
-						value="Deformidade"> <label>Deformidade</label>
-					<input type="checkbox" th:field="*{sintomas}" value=Inchaco>
-					<label>Inchaco</label> 
-					<input type="checkbox"
-						th:field="*{sintomas}" value="Dor_leve_recente"> <label>Dor_leve_recente</label>
+						value="Dor_leve_recente"> <label>Dor_leve_recente</label>
 				</div>
 			</div>
-			<input type="checkbox"
-						th:field="*{sintomas}" value="Evento_recente"> <label>Evento_recente</label>
+			<input type="checkbox" th:field="*{sintomas}" value="Evento_recente">
+			<label>Evento_recente</label>
 			<p>
 			<div>
 				<button type="submit">Ir para classificação</button>
 				<div>
-					<a href="/sintomas_comuns" style="width: 300px">Voltar para a
-						tela de fluxograma para Sintomas Comuns</a>
+					<a href="/sintomas_comuns_02" style="width: 300px">Voltar para
+						a tela de fluxograma para Sintomas Comuns</a>
 				</div>
 			</div>
 		</form>

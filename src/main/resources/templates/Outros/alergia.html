@@ -18,7 +18,7 @@ label {
 
 
 	<div class="container" align="center">
-<h3>Fluxograma 02 - Alergia</h3>
+		<h3>Fluxograma 02 - Alergia</h3>
 		<p>
 		<form action="#" th:action="@{/Outros/alergia}"
 			th:object="${sintomasClassificacaoModel}" method="post">
@@ -38,9 +38,8 @@ label {
 
 
 					<input type="checkbox" th:field="*{sintomas}" id="11"
-						value="Estridor"> <label for="11">Estridor</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Estridor"> <label for="11">Estridor</label> <input
+						type="checkbox" th:field="*{sintomas}" id="12"
 						value="Edema_facial"> <label for="12">Edema_facial</label>
 
 				</div>
@@ -82,16 +81,16 @@ label {
 						value="Sat_O2_baixa"> <label for="24722">Sat_O2_baixa</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="24as722"
-						value="Erupcao_ou_vesiculas_disseminadas"> <label for="24as722">Erupcao_ou_vesiculas_disseminadas</label>
+						value="Erupcao_ou_vesiculas_disseminadas"> <label
+						for="24as722">Erupcao_ou_vesiculas_disseminadas</label>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="a24as722"
-						value="Dor_ou_coceira_moderadas"> <label
-						for="a24as722">Dor_ou_coceira_moderadas</label> <input
-						type="checkbox" th:field="*{sintomas}" id="b24as722"
+						value="Dor_ou_coceira_moderadas"> <label for="a24as722">Dor_ou_coceira_moderadas</label>
+					<input type="checkbox" th:field="*{sintomas}" id="b24as722"
 						value="Inflamacao_local"> <label for="b24as722">Inflamacao_local</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="c24as722"
@@ -109,19 +108,18 @@ label {
 			</div>
 
 
-			
+
 			<p>
 			<div>
-				<button type="submit">Ir para classificação
-				</button>
-							<div>
-				<a href="/outros" style="width: 300px">Voltar para a tela de
-					outros fluxogramas</a>
-			</div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros_02" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
 
 			</div>
 		</form>
 	</div>
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>

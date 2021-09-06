@@ -18,7 +18,15 @@ public class SintomasClassificacaoModel implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private int tempoAtendimentoMinutos;
-	private String sintomas, classificacao, local, grupo, tempoAtendimentoImediato;
+	private String sintomas, classificacao, local, grupo, tempoAtendimentoImediato,fluxograma;
+
+	public String getFluxograma() {
+		return fluxograma;
+	}
+
+	public void setFluxograma(String fluxograma) {
+		this.fluxograma = fluxograma;
+	}
 
 	public long getId() {
 		return id;
@@ -80,7 +88,7 @@ public class SintomasClassificacaoModel implements Serializable {
 	public String toString() {
 		return "SintomasClassificacaoModel [id=" + id + ", tempoAtendimentoMinutos=" + tempoAtendimentoMinutos
 				+ ", sintomas=" + sintomas + ", classificacao=" + classificacao + ", local=" + local + ", grupo="
-				+ grupo + ", tempoAtendimentoImediato=" + tempoAtendimentoImediato + "]";
+				+ grupo + ", tempoAtendimentoImediato=" + tempoAtendimentoImediato + ", fluxograma=" + fluxograma + "]";
 	}
 
 

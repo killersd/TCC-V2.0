@@ -16,16 +16,15 @@ label {
 </head>
 <body>
 	<div class="container" align="center">
-<h3>Fluxograma 32 - Infecções Locais e Abcessos</h3>
+		<h3>Fluxograma 32 - Infecções Locais e Abcessos</h3>
 		<p>
-		<form action="#" th:action="@{/SintomasComuns/infeccoesLocaisAbcessos}"
+		<form action="#"
+			th:action="@{/SintomasComuns/infeccoesLocaisAbcessos}"
 			th:object="${sintomasClassificacaoModel}" method="post">
-			
+
 			<input type="checkbox" th:field="*{sintomas}" id="8"
 				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
-				das vias aéreas</label> 
-				
-				<input type="checkbox" th:field="*{sintomas}" id="9"
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
 				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
 
 			<input type="checkbox" th:field="*{sintomas}" id="477" value="Choque">
@@ -54,9 +53,8 @@ label {
 						value="Adulto_muito_quente"> <label for="12">Adulto_muito_quente</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="13"
-						value="Dor_intensa"> <label for="13">Dor_intensa</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Dor_intensa"> <label for="13">Dor_intensa</label> <input
+						type="checkbox" th:field="*{sintomas}" id="16"
 						value="Dor_ao_movimento_articular"> <label for="16">Dor_ao_movimento_articular</label>
 				</div>
 			</div>
@@ -78,22 +76,21 @@ label {
 				<div class="col-md-6">
 
 					<input type="checkbox" th:field="*{sintomas}" id="24711"
-						value="Febril"> <label for="24711">Febril</label>
-
-					<input type="checkbox" th:field="*{sintomas}" id="24722"
+						value="Febril"> <label for="24711">Febril</label> <input
+						type="checkbox" th:field="*{sintomas}" id="24722"
 						value="Dor_leve_recente"> <label for="24722">Dor_leve_recente</label>
 
 					<input type="checkbox" th:field="*{sintomas}" id="24as722"
 						value="Evento_recente"> <label for="24as722">Evento_recente</label>
 				</div>
 			</div>
-			
+
 			<p>
 			<div>
 				<button type="submit">Ir para classificação</button>
 				<div>
-					<a href="/sintomas_comuns" style="width: 300px">Voltar para a tela de
-						fluxograma para Sintomas Comuns</a>
+					<a href="/sintomas_comuns_02" style="width: 300px">Voltar para
+						a tela de fluxograma para Sintomas Comuns</a>
 				</div>
 
 			</div>
