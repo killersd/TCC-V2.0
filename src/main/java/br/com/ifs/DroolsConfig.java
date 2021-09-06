@@ -22,7 +22,7 @@ public class DroolsConfig {
 	private KieFileSystem getKieFileSystem() throws IOException {
 
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		kieFileSystem.write(ResourceFactory.newClassPathResource("Regras/Regras.drl"));
+		kieFileSystem.write(ResourceFactory.newClassPathResource("Regras/regras2.drl"));
 		return kieFileSystem;
 	}
 
