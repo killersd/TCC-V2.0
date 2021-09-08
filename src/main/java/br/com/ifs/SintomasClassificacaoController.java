@@ -51,7 +51,7 @@ public class SintomasClassificacaoController {
 				break;
 			case "AMARELA":
 				sintomasClassificacao.setTempoAtendimentoImediato("ATENDIMENTO URGENTE");
-				sintomasClassificacao.setTempoAtendimentoMinutos(50);
+				sintomasClassificacao.setTempoAtendimentoMinutos(60);
 				break;
 			case "VERDE":
 				sintomasClassificacao.setTempoAtendimentoImediato("ATENDIMENTO POUCO URGENTE");
