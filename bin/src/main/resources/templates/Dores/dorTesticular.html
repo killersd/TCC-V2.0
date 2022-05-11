@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Dor Testicular</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>24 - Dor Testicular</h2>
+		<form action="#" th:action="@{/Dores/dorTesticular}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="477"
+					value="Choque"> <label for="477">Choque</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Idade_menor_que_25_anos"> <label for="10">Idade
+					< 25 anos</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Gangrena_de_escroto"> <label for="11">Gangrena_de_escroto</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Adulto_muito_quente"> <label for="12">Adulto_muito_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Crianca_quente"> <label for="12">Crianca_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value="Dor_intensa"> <label for="13">Dor_intensa</label>
+			</div>
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="16"
+					value="Celulite_de_escroto"> <label for="16">Celulite_de_escroto</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="17"
+					value="Colicas"> <label for="17">Colicas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18"
+					value="Vomitos_persistentes"> <label for="18">Vomitos_persistentes</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="26"
+					value="Adulto_quente"> <label for="26">Adulto_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="227"
+					value="Dor_moderada"> <label for="227">Dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="237"
+					value="Trauma_de_escroto"> <label for="237">Trauma_de_escroto</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="247"
+					value="Vomitos"> <label for="247">Vomitos</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="24711"
+					value="Dor_leve_recente"> <label for="24711">Dor_leve_recente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="24722"
+					value="Evento_recente"> <label for="24722">Evento_recente</label>
+			</div>
+
+			<div>
+				<a href="/dores_02" style="width: 300px">Voltar para a tela de
+					fluxograma para Dores</a>
+			</div>
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<meta charset="UTF-8">
+<title>Exposição à Agentes Químicos</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+
+
+	<div class="container" align="center">
+		<h3>Fluxograma 15 - Exposição à Agentes Químicos</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/exposicaoAgentesQuimicos}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Estridor"> <label for="477">Estridor</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Convulsionando"> <label for="10">Convulsionando</label>
+					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Lesao_ocular_quimica_aguda"> <label for="11">Lesao_ocular_quimica_aguda</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Choque"> <label for="12">Choque</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Mortalidade_alta"> <label for="12">Mortalidade_alta</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Edema_facial"> <label for="13">Edema_facial</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Edema_de_lingua"> <label for="16">Edema_de_lingua</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Alteracao_subita_da_consciencia"> <label
+						for="17">Alteracao_subita_da_consciencia</label> <input
+						type="checkbox" th:field="*{sintomas}" id="16"
+						value="Risco_de_contaminacao_persistente"> <label for="16">Risco_de_contaminacao_persistente</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Sat_O2_muito_baixa"> <label for="16">Sat_O2_muito_baixa</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="aaa17"
+						value="Dor_intensa"> <label
+						for="aaa17">Dor_intensa</label> <input
+						type="checkbox" th:field="*{sintomas}" id="aaa16" value="Mortalidade_moderada">
+					<label for="aaa16">Mortalidade_moderada</label> <input type="checkbox"
+						th:field="*{sintomas}" id="aaas16" value="Erupcao_ou_vesiculas_disseminadas">
+					<label for="aaas16">Erupcao_ou_vesiculas_disseminadas</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Historia_discordante"> <label>Historia_discordante</label> <input
+						type="checkbox" th:field="*{sintomas}" value="Sat_O2_baixa">
+					<label>Sat_O2_baixa</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Dor_moderada"> <label>Dor_moderada</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Dor_leve_recente"> <label>Dor_leve_recente</label> <input
+						type="checkbox" th:field="*{sintomas}" value="Evento_recente"> <label>Evento_recente</label>					
+				</div>
+			</div>
+			
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros_02" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

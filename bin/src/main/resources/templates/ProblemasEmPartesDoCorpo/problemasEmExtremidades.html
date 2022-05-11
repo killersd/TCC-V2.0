@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Problemas em Extremidades</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>40 - Problemas em Extremidades</h2>
+		<form action="#"
+			th:action="@{/ProblemasEmPartesDoCorpo/problemasEmExtremidades}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="454"
+					value="Hemorragia_hexanguinante"> <label for="454">Hemorragia_hexanguinante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2" value="Choque">
+				<label for="2">Choque</label>
+			</div>
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="7"
+					value="Dispineia_aguda"> <label for="7">Dispineia_aguda</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Pele_critica"> <label for="10">Pele_critica</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Comprometimento_vascular_distal"> <label for="11">Comprometimento_vascular_distal</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Hemorragia_maior_incontrolavel"> <label for="12">Hemorragia_maior_incontrolavel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Dor_intensa"> <label for="12">Dor_intensa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value=Dor_pleuritica> <label for="13">Dor_pleuritica</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="14"
+					value="Deformidade_grosseira"> <label for="14">Deformidade_grosseira</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="15"
+					value="Fratura_exposta"> <label for="15">Fratura_exposta</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="16"
+					value="Hemorragia_menor_incontrolavel"> <label for="16">Hemorragia_menor_incontrolavel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="17"
+					value="Deficit_neurologico_novo"> <label for="17">Deficit_neurologico_novo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18"
+					value="Disturbio_de_coagulacao"> <label for="18">Disturbio_de_coagulacao</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="19"
+					value="Historia_discordante"> <label for="19">Historia_discordante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="20"
+					value="Dor_moderada"> <label for="20">Dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="21"
+					value="Deformidade"> <label for="21">Deformidade</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2551"
+					value="Edema"> <label for="2551">Edema</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2561"
+					value="Dor_leve_recente"> <label for="2561">Dor_leve_recente</label>
+			</div>
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="25561"
+					value="Evento_recente"> <label for="25561">Evento_recente</label>
+			</div>
+
+			<div>
+				<a href="/partes_do_corpo_02" style="width: 300px">Voltar para a tela de
+					fluxograma para problemas em partes do corpo</a>
+			</div>
+
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

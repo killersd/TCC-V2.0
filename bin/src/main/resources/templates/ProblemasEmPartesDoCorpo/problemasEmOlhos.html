@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Problemas em Olhos</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>42 - Problemas em Olhos</h2>
+		<form action="#"
+			th:action="@{/ProblemasEmPartesDoCorpo/problemasEmOlhos}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2" value="Choque">
+				<label for="2">Choque</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="454"
+					value="Lesao_ocular_quimica_aguda"> <label for="454">Lesao_ocular_quimica_aguda</label>
+			</div>
+
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="7"
+					value="Trauma_ocular_penetrante"> <label for="7">Trauma_ocular_penetrante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Perda_total_da_visao_aguda"> <label for="10">Perda_total_da_visao_aguda</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Adulto_muito_quente"> <label for="11">Adulto_muito_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Crianca_quente"> <label for="12">Crianca_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Dor_intensa"> <label for="12">Dor_intensa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value="Reducao_recente_da_acuidade_visual"> <label for="13">Reducao_recente_da_acuidade_visual</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18"
+					value="Historia_discordante"> <label for="18">Historia_discordante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="19"
+					value="Adulto_quente"> <label for="19">Adulto_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="20"
+					value="Dor_moderada"> <label for="20">Dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="21"
+					value="Olhos_vermelhos"> <label for="21">Olhos_vermelhos</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2551"
+					value="Sensacao_de_corpo_estranho"> <label for="2551">Sensacao_de_corpo_estranho</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2561"
+					value="Diplopia"> <label for="2561">Diplopia</label>
+			</div>
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="25561"
+					value="Dor_leve_recente"> <label for="25561">Dor_leve_recente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="25561a"
+					value="Evento_recente"> <label for="25561a">Evento_recente</label>
+			</div>
+
+			<div>
+				<a href="/partes_do_corpo_02" style="width: 300px">Voltar para a tela de
+					fluxograma para problemas em partes do corpo</a>
+			</div>
+
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

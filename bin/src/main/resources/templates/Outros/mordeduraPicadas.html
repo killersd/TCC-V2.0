@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<meta charset="UTF-8">
+<title>Mordeduras e Picadas</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+
+
+	<div class="container" align="center">
+		<h3>Fluxograma 35 - Mordeduras e Picadas</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/mordeduraPicadas}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477"
+				value="Hemorragia_hexanguinante"> <label for="477">Hemorragia_hexanguinante</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Choque"> <label for="10">Choque</label> <input
+						type="checkbox" th:field="*{sintomas}" id="11" value="Estridor">
+					<label for="11">Estridor</label> <input type="checkbox"
+						th:field="*{sintomas}" id="12" value="Edema_facial"> <label
+						for="12">Edema_facial</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Edema_de_lingua"> <label for="12">Edema_de_lingua</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Frases_entrecortadas"> <label for="13">Frases_entrecortadas</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Hemorragia_maior_incontrolavel"> <label for="16">Hemorragia_maior_incontrolavel</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Historia_alergica_importante"> <label for="17">Historia_alergica_importante</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Envenenamento_de_alta_mortalidade"> <label for="16">Envenenamento_de_alta_mortalidade</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Alteracao_subita_da_consciencia"> <label for="16">Alteracao_subita_da_consciencia</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="aaa17"
+						value="Sat_O2_muito_baixa"> <label for="aaa17">Sat_O2_muito_baixa</label>
+					<input type="checkbox" th:field="*{sintomas}" id="aaa16"
+						value="Crianca_quente"> <label for="aaa16">Crianca_quente</label>
+					<input type="checkbox" th:field="*{sintomas}" id="aaas16"
+						value="Adulto_muito_quente"> <label for="aaas16">Adulto_muito_quente</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Dor_ou_coceira_intensas"> <label>Dor_ou_coceira_intensas</label>
+					<input type="checkbox" th:field="*{sintomas}" value="Sat_O2_baixa">
+					<label>Sat_O2_baixa</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Hemorragia_menor_incontrolavel">
+					<label>Hemorragia_menor_incontrolavel</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Erupcao_ou_vesiculas_disseminadas"> <label>Erupcao_ou_vesiculas_disseminadas</label>
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Envenenamento_de_moderada_mortalidade"> <label>Envenenamento_de_moderada_mortalidade</label>
+					<input type="checkbox" th:field="*{sintomas}" value="Adulto_quente">
+					<label>Adulto_quente</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Dor_ou_coceira_moderadas"> <label>Dor_ou_coceira_moderadas</label>
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Inflamacao_local"> <label>Inflamacao_local</label>
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Infeccao_local"> <label>Infeccao_local</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Dor_leve_recente">
+					<labe>Dor_leve_recente</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Evento_recente"> <label>Evento_recente</label>
+				</div>
+			</div>
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros_02" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

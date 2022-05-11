@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Criança Mancando</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>11 - Criança Mancando</h2>
+		<form action="#" th:action="@{/Criancas/criancaMancando}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2" value="Choque">
+				<label for="2">Choque</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Sinais_de_dor_intensa"> <label for="10">Sinais_de_dor_intensa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Comprometimento_vascular_distal"> <label for="11">Comprometimento_vascular_distal</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Erupcao_cultanea_fixa"> <label for="12">Erupcao_cultanea_fixa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value="Purpura"> <label for="13">Purpura</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="15"
+					value="Crianca_quente"> <label for="15">Crianca_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="16"
+					value="Sinais_de_dor_moderada"> <label for="16">Sinais_de_dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="17"
+					value="Dor_ao_movimento_articular"> <label for="17">Dor_ao_movimento_articular</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18"
+					value="Historia_discordante"> <label for="18">Historia_discordante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="19"
+					value="Disturbio_de_coagulacao"> <label for="19">Disturbio_de_coagulacao</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="20"
+					value="Articulacao_quente"> <label for="20">Articulacao_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="21"
+					value="Sinais_de_dor_leve"> <label for="21">Sinais_de_dor_leve</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="22" value="Febril">
+				<label for="22">Febril</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="23"
+					value="Deformidade"> <label for="23">Deformidade</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="24"
+					value="Inchaco"> <label for="24">Inchaco</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="25"
+					value="Evento_recente"> <label for="25">Evento_recente</label>
+			</div>
+			<div>
+				<a href="/criancas_02" style="width: 300px">Voltar para a tela
+					de fluxograma para crianças</a>
+			</div>
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

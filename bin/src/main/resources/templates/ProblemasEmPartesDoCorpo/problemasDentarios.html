@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Problemas Dentários</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>39 - Problemas Dentários</h2>
+		<form action="#"
+			th:action="@{/ProblemasEmPartesDoCorpo/problemasDentarios}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="2" value="Choque">
+				<label for="2">Choque</label>
+			</div>
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="7"
+					value="Hemorragia_maior_incontrolavel"> <label for="7">Hemorragia_maior_incontrolavel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Crianca_quente"> <label for="10">Crianca_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Adulto_muito_quente"> <label for="11">Adulto_muito_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Dor_intensa"> <label for="12">Dor_intensa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Hemorragia_menor_incontrolavel"> <label for="12">Hemorragia_menor_incontrolavel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value=Avulcao_dentaria_aguda> <label for="13">Avulcao_dentaria_aguda</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="14"
+					value="Disturbio_de_coagulacao"> <label for="14">Disturbio_de_coagulacao</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="15"
+					value="Historia_discordante"> <label for="15">Historia_discordante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="16"
+					value="Adulto_quente"> <label for="16">Adulto_quente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="17"
+					value="Dor_moderada"> <label for="17">Dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18" value="Febril">
+				<label for="18">Febril</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="19"
+					value="Edema_facial"> <label for="19">Edema_facial</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="20"
+					value="Dor_leve_recente"> <label for="20">Dor_leve_recente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="21"
+					value="Evento_recente"> <label for="21">Evento_recente</label>
+			</div>
+
+			<div>
+				<a href="/partes_do_corpo_02" style="width: 300px">Voltar para a tela de
+					fluxograma para problemas em partes do corpo</a>
+			</div>
+
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

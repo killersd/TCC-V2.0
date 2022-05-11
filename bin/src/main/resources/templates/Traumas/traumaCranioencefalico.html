@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Trauma Cranioencefálico</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 400px;
+	margin: 2px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text], input[type=password], select {
+	display: inline-block;;
+	width: 200 px;
+}
+
+input[type=checkbox] {
+	margin-right: 190 px;
+}
+</style>
+</head>
+<body>
+	<div align="center" class="container">
+		<h2>48 - Trauma Crânioencefálico</h2>
+		<form action="#" th:action="@{/Traumas/traumaCranioencefalico}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="8"
+					value="Obstrucao_das_vias_aereas"> <label for="8">Obstrucao_das_vias_aereas</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="9"
+					value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="254"
+					value="Hemorragia_hexanguinante"> <label for="254">Hemorragia_hexanguinante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="477"
+					value="Choque"> <label for="477">Choque</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="7"
+					value="Crianca_nao_reativa"> <label for="7">Crianca_nao_reativa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="10"
+					value="Convulsionando"> <label for="10">Convulsionando</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="11"
+					value="Hipoglicemia"> <label for="11">Hipoglicemia</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="121"
+					value="Mecanismo_de_trauma_significativo"> <label for="121">Mecanismo_de_trauma_significativo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Hemorragia_maior_incontrolavel"> <label for="12">Hemorragia_maior_incontrolavel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="12"
+					value="Alteracao_subita_da_consciencia"> <label for="12">Alteracao_subita_da_consciencia</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="13"
+					value=Deficit_neurologico_agudo> <label for="13">Deficit_neurologico_agudo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="15"
+					value="Dor_intensa"> <label for="15">Dor_intensa</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="16"
+					value="Historia_de_inconsciencia"> <label for="16">Historia_de_inconsciencia</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="17"
+					value="Disturbio_de_coagulacao"> <label for="17">Disturbio_de_coagulacao</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="18"
+					value="Historia_discordante"> <label for="18">Historia_discordante</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="19"
+					value="Hemorragia_menor_incontrolavel"> <label for="19">Hemorragia_menor_incontrolavel</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="20"
+					value="Vomitos_persistentes"> <label for="20">Vomitos_persistentes</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="22"
+					value="Deficit_neurologico_novo"> <label for="22">Deficit_neurologico_novo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="23"
+					value="Dor_moderada"> <label for="23">Dor_moderada</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="24"
+					value="Hematoma_de_couro_cabeludo"> <label for="24">Hematoma_de_couro_cabeludo</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="25" value="Vomitos">
+				<label for="25">Vomito</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="26"
+					value="Dor_leve_recente"> <label for="26">Dor_leve_recente</label>
+			</div>
+			<div>
+				<input type="checkbox" th:field="*{sintomas}" id="27"
+					value="Evento_recente"> <label for="27">Evento_recente</label>
+			</div>
+			<div>
+				<a href="/traumas_02" style="width: 300px">Voltar para a tela de
+					fluxogramas para traumas</a>
+			</div>
+
+			<button type="submit">Ir para classificação</button>
+
+		</form>
+	</div>
+</body>
+</html>

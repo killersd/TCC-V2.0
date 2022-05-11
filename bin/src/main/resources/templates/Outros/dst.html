@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<meta charset="UTF-8">
+<title>DST</title>
+<style type="text/css">
+label {
+	display: inline-block;
+	width: 300px;
+	margin: 2px;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+
+
+	<div class="container" align="center">
+		<h3>Fluxograma 18 - Doença Sexualmente Transmissível</h3>
+		<p>
+		<form action="#" th:action="@{/Outros/dst}"
+			th:object="${sintomasClassificacaoModel}" method="post">
+			<input type="checkbox" th:field="*{sintomas}" id="8"
+				value="Obstrucao_das_vias_aereas"> <label for="8">Obstrução
+				das vias aéreas</label> <input type="checkbox" th:field="*{sintomas}" id="9"
+				value="Respiracao_inadequada"> <label for="9">Respiracao_inadequada</label>
+			<input type="checkbox" th:field="*{sintomas}" id="477" value="Choque">
+			<label for="477">Choque</label>
+
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+
+					<input type="checkbox" th:field="*{sintomas}" id="10"
+						value="Alteracao_subita_da_consciencia"> <label for="10">Alteracao_subita_da_consciencia</label>
+					<input type="checkbox" th:field="*{sintomas}" id="11"
+						value="Erupcao_cultanea_fixa"> <label for="11">Erupcao_cultanea_fixa</label>
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Purpura"> <label for="12">Purpura</label>
+
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="12"
+						value="Adulto_muito_quente"> <label for="12">Adulto_muito_quente</label>
+
+					<input type="checkbox" th:field="*{sintomas}" id="13"
+						value="Dor_intensa"> <label for="13">Dor_intensa</label> <input
+						type="checkbox" th:field="*{sintomas}" id="16"
+						value="Dor_testicular"> <label for="16">Dor_testicular</label>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" id="17"
+						value="Erupcao_ou_vesiculas_disseminadas"> <label for="17">Erupcao_ou_vesiculas_disseminadas</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Imunosupressao_conhecida"> <label for="16">Imunosupressao_conhecida</label>
+					<input type="checkbox" th:field="*{sintomas}" id="16"
+						value="Dor_ao_movimento_articular"> <label for="16">Dor_ao_movimento_articular</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}"
+						value="Articulacao_quente"> <label>Articulacao_quente</label>
+					<input type="checkbox" th:field="*{sintomas}" value="Adulto_quente">
+					<label>Adulto_quente</label> <input type="checkbox"
+						th:field="*{sintomas}" value="Dor_moderada"> <label>Dor_moderada</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<input type="checkbox" th:field="*{sintomas}" value="Febril">
+					<label>Febril</label> <input type="checkbox" th:field="*{sintomas}"
+						value="Corrimento"> <label>Corrimento</label> <input
+						type="checkbox" th:field="*{sintomas}" value="Dor_leve_recente">
+					<label>Dor_leve_recente</label>
+				</div>
+			</div>
+			<input type="checkbox" th:field="*{sintomas}" value="Evento_recente">
+			<label>Evento_recente</label>
+			<p>
+			<div>
+				<button type="submit">Ir para classificação</button>
+				<div>
+					<a href="/outros_02" style="width: 300px">Voltar para a tela de
+						outros fluxogramas</a>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

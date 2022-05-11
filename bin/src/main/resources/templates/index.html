@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Página Inicial</title>
+</head>
+<nav class="green">
+	<div class="nav-wrapper">	
+		<a href="#" class="brand-logo">Sistema de Classificação de Risco</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="/grupos">Classificar um paciente</a></li>
+			<li><a href="/classificacao_final">Ver classificações salvas</a></li>
+		</ul>
+	</div>
+</nav>
+<body>
+	<div class="container" align="center">
+		<h3><b>Sistema de Classificação de Risco</b></h3>
+		<img th:src="@{/images/manchester protocol.jpg}" width="550px" />
+	</div>
+	<script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+<footer>
+	<div class="footer-copyright" align="center">
+		<div class="container">
+			© 2021 Alex de Oliveira Souza - Instituto Federal de Sergipe - Campus
+			Lagarto - Curso de Bacharelado em Sistemas de Informação<a
+				class="grey-text text-lighten-4 right" href="#!">More Links</a>
+		</div>
+	</div>
+</footer>
+</html>
